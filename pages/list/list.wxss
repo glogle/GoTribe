@@ -1,0 +1,53 @@
+/* pages/detail/detail.wxss */
+.list_box{
+  position: relative;
+  background-color: #eee;
+}
+.swiper-tab{
+  width: 100%;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  top: 0px;
+  display: flex;
+  flex-flow: row;
+  background-color: #eee;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #ccc;
+}
+.swiper-tab-item{
+  width: 30%; 
+  color:#434343;
+}
+.active{
+  color:#398bf7;
+  border-bottom: 4rpx solid #398bf7;
+}
+.sw_box{
+  height: 100px;
+  overflow-y:scroll;
+}
+
+.cont_data{
+  height: 100px;
+  /* background-color: #eee; */
+}
+/*隐藏滚动条*/
+.flex_box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #398bf7;
+}
+.g_switme{
+  padding:10px;
+  height: 100%;
+
+  box-sizing: border-box;
+}
+.viewbox{
+  background-color: rgba(241, 91, 4, 0.856)
+}
+.view_cot{
+  height: 100%;
+}

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "classlist":"/pages/list/component/funBtn/funBtn"
+  }
+}

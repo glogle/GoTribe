@@ -1,0 +1,9 @@
+<view class="musicbox">
+  <classlist grids="{{datas.data.result}}"></classlist>
+   <!-- <block wx:for="{{datas.data.result}}" wx:key="*this" wx:for-item="item">
+      <view>
+        {{item.name}}
+        
+      </view>
+    </block> -->
+</view>

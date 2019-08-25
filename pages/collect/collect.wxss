@@ -1,0 +1,11 @@
+/* pages/collect/collect.wxss */
+.bx_bot{
+  padding: 0 10px;
+  padding-top: 10px;
+  background-color: #eee;
+}
+.list_item{
+  padding: none;
+  border-radius: 8px;
+  background-color: #fff;
+}

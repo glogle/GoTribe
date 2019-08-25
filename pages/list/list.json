@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "列表",
+  "usingComponents": {
+        "panel": "/pages/list/component/panel/panel",
+        "gridlist": "/pages/list/component/grid/grid",
+        "music": "/pages/list/component/music/music"
+  }
+  
+}

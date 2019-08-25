@@ -1,0 +1,16 @@
+<view>
+<view class="g_pd">
+    <view class="weui-search-bar__form ">
+        <view class="weui-search-bar__box">
+            <view class="weui-search-bar__input" ></view>
+        </view>
+        <label class="weui-search-bar__label" bindtap="bindViewTap">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">搜索</view>
+        </label>
+    </view>
+</view> 
+  <swiper></swiper>
+  <grids></grids>
+  <panel></panel>
+</view>

@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/list/list",
+    "pages/home/home",
+    "pages/collect/collect",
+    "pages/user/user",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/home/pages/search",
+    "pages/list/pages/musicList/musicList"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#398bf7",
+    "navigationBarTitleText": "Go部落",
+    "navigationBarTextStyle": "white",
+    "backgroundColorTop": "#fff",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50,
+    "backgroundColor": "#000"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#caef07",
+    "backgroundColor": "#398bf7",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "imgs/icons/icon-test_2.png",
+        "selectedIconPath": "imgs/icons/icon-test_5.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "列表",
+        "iconPath": "imgs/icons/icon-test.png",
+        "selectedIconPath": "imgs/icons/icon-test_12.png"
+      },
+      {
+        "pagePath": "pages/collect/collect",
+        "text": "收藏",
+        "iconPath": "imgs/icons/icon-test_11.png",
+        "selectedIconPath": "imgs/icons/icon-test_14.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "imgs/icons/icon-test_15.png",
+        "selectedIconPath": "imgs/icons/icon-test_9.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

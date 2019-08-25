@@ -1,0 +1,41 @@
+<!--pages/detail/detail.wxml-->
+  <view class="list_box">
+    <view class="swiper-tab">
+    <block wx:for="{{list}}" wx:key="*this" wx:for-item="item" wx:for-index="index">
+      <view class="swiper-tab-item {{currentTab==index?'active':''}}" data-current="{{item.id}}" bindtap="clickTab">{{item.title}}</view>
+    </block>
+  </view>
+ 
+  <view class="sw_box" style="height:{{heights+'px'}};">
+    <swiper current="{{currentTab}}" duration="300" bindchange="swiperTab" style="height:{{heights+'px'}};" >
+      <!-- <block wx:for="{{list}}" wx:key="*this" wx:for-item="item"> -->
+        <swiper-item class="g_switme">
+          <scroll-view scroll-y="true" style="height:{{heights+'px'}};" >
+
+              <panel></panel>
+          
+          </scroll-view>
+        </swiper-item>
+        <swiper-item class="g_switme">
+          <scroll-view scroll-y="true" style="height:{{heights+'px'}};" >
+
+              <panel></panel>
+          
+          </scroll-view>
+        </swiper-item>
+        <swiper-item class="g_switme">
+          <scroll-view scroll-y="true" style="height:{{heights+'px'}};" >
+
+              <panel></panel>
+          
+          </scroll-view>
+        </swiper-item>
+        <swiper-item class="g_switme">
+          <scroll-view scroll-y="true" style="height:{{heights+'px'}};" >
+            <music datas="{{datas}}"></music>
+          </scroll-view>
+        </swiper-item>
+      <!-- </block> -->
+    </swiper>
+  </view>
+</view>

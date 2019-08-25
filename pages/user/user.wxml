@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="bg_img_box">
+    <image src="/imgs/user/haizei.png" class="bg_img"></image>
+    <image src="/imgs/user/config.png" class="set_btn"></image>
+      <view class="userinfo">
+        <view class="user_box">
+          <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+          <block wx:else class="tx_img">
+            <image bindtap="bindViewTap" class="userinfo-avatar " src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+          </block>
+        </view>
+      </view>
+      <btn></btn>
+      <btn></btn>
+  </view>
+</view>
