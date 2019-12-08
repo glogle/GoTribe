@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/list/list",
     "pages/home/home",
     "pages/collect/collect",
+    "pages/list/list",
     "pages/user/user",
     "pages/index/index",
     "pages/logs/logs",
@@ -13,7 +13,7 @@
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#398bf7",
     "navigationBarTitleText": "Go部落",
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "white",            
     "backgroundColorTop": "#fff",
     "enablePullDownRefresh": true,
     "onReachBottomDistance": 50,
