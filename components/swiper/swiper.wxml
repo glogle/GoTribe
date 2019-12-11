@@ -1,5 +1,5 @@
 <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
   <block wx:for="{{imgUrls}}" wx:key="{{index}}">
     <swiper-item>
       <view class="g_spd">
