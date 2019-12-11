@@ -1,10 +1,15 @@
 <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{imgData}}" wx:key="{{index}}">
     <swiper-item>
+      <slot></slot>
       <view class="g_spd">
         <image src="{{item}}" class="slide-image" width="100%" />
       </view>
     </swiper-item>
   </block>
 </swiper>
+
+
+
+

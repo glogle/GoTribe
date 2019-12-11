@@ -1,0 +1,16 @@
+<view class="swiper_box">
+  <view class='background'>
+    <view class="image_container {{move == 1?'anim_pre':(move == 2?'anim_next':'left')}}" >
+      <view class="image"  wx:for="{{list}}" wx:key="{{index}}" style='background:{{item}}'></view>
+    </view>
+  </view>
+  
+  <view class='btn'>
+    <view class='pots {{pot == index?"gray":""}}' bindtap='pots' data-index="{{index}}" wx:for="{{list}}" wx:key="{{index}}"></view>
+  </view>
+  
+  <view class='btn' style='top:600rpx;'>
+    <view style='margin:10rpx auto;' bindtap='pre'>上一页</view>
+    <view style='margin:10rpx auto;' bindtap='next'>下一页</view>
+  </view>
+</view>

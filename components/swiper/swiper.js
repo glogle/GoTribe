@@ -1,35 +1,42 @@
-Page({
+Component({
+  // options: {
+  //   multipleSlots: true // 在组件定义时的选项中启用多slot支持
+  // },
+  properties: {
+    imgData:{
+      type:Array,
+      default: [],
+    }
+  },
+
   data: {
-    imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-    ],
     indicatorDots: true,
     autoplay: true,
     interval: 2000,
     duration: 1000,
-    previousMargin:"10px",
-    circular: true//是否采用衔接滑动
+    previousMargin: "10px",
+    circular: true // 是否采用衔接滑动
   },
-  changeIndicatorDots: function (e) {
+  changeIndicatorDots (e) {
     this.setData({
       indicatorDots: !this.data.indicatorDots
     })
   },
-  changeAutoplay: function (e) {
+  changeAutoplay (e) {
     this.setData({
       autoplay: !this.data.autoplay
     })
   },
-  intervalChange: function (e) {
+  intervalChange (e) {
     this.setData({
       interval: e.detail.value
     })
   },
-  durationChange: function (e) {
+  durationChange (e) {
     this.setData({
       duration: e.detail.value
     })
   }
 })
+
+

@@ -10,7 +10,7 @@
         </label>
     </view>
 </view> 
-  <swiper></swiper>
+  <swiper imgData="{{imgUrls}}"></swiper>
   <grids></grids>
   <panel></panel>
 </view>
