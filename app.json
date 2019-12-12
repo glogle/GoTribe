@@ -3,7 +3,6 @@
     "pages/home/home",
     "pages/list/list",
     "pages/collect/collect",
-    "pages/list/list",
     "pages/user/user",
     "pages/index/index",
     "pages/logs/logs",
