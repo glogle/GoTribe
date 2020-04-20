@@ -1,0 +1,73 @@
+/*自定义轮播图样式  */
+/* /deep/.swiper{
+height: 
+
+} */
+.slider{
+  display: block;
+  position: absolute;
+  top: 220rpx;
+  left: 0;
+  z-index: 9;
+  /* height: 322rpx; */
+  overflow: hidden;
+  background-color:#eee;
+}
+.slider .slider-item{
+  position:relative;
+  display:inline-block;
+  width:100%;
+  box-sizing:border-box;
+  line-height: 0;
+}
+.slider .slider-form{
+  position:relative;
+  display:inline-block;
+  width:100%;
+  border-radius: 6px;
+}
+.slider .slider-img{
+  border-radius: 6px;
+  width:100%;
+  height: 322rpx;
+}
+.slider .slider-item .carddetail{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 8;
+}
+.slider .slider-indicate-dots{
+  line-height: 0;
+  z-index:9999;
+  margin-top: -14px;
+  padding-bottom: 8px;
+  position: relative;
+  text-align:center;
+}
+.slider .slider-indicate-dot{
+  width:6px; 
+  height:6px;
+  background:rgba(255, 255, 255, 0.5);
+  display:inline-block;
+  margin-right:4px;
+  border-radius:100%;
+  line-height: 0;
+  box-sizing: border-box;
+}
+.slider .button-hover{
+  background: none;
+  border:none;
+}
+.slider .slider-indicate-dot.active{
+  background: white;
+  width:16px;
+  border-radius:4px;
+
+}
+.g_spd{
+  padding: 0 10px;
+}
+

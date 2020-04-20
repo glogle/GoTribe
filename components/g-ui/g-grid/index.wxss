@@ -1,0 +1,33 @@
+/* components/g-ui/g-grids/index.wxss */
+
+.g_flex{
+  padding: 10px 10px;
+  background-color: #eee;
+
+}
+.flex_box{
+   display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #fff;
+   justify-content: space-around;
+}
+.g_item_box{
+  flex: 1;
+  display: flex;
+  padding: 10px 0px;  
+  justify-content: space-around;
+}
+.g_item{
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  color:#fff;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #398bf7;
+  
+}

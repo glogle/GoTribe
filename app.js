@@ -1,10 +1,13 @@
 //app.js
-var that;
+// import 'assets/api/listen1-api.min.js'
+const config = require('./config/index.js')
 App({
+  globalData:{
+    txKey:'e16f8d4f026123c6b0deb96324b7e1c5'
+  },
   //应用程序启动
   onLaunch: function () {
-    that = this;
-    // toLogin()
+    this.config = config
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -38,11 +41,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    latitude:null,
+    longitude:null
   }
 });
-
-//跳转到登录页面
-function toLogin() {
-  that.launch("/pages/user/user");
-}

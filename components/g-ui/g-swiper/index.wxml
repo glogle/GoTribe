@@ -1,0 +1,17 @@
+<swiper indicator-dots="{{indicatorDots}}"
+indicator-color="{{gcolor}}"
+indicator-active-color="#fff"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{imgData}}" wx:key="*this">
+    <swiper-item>
+      <slot></slot>
+      <view class="g_spd">
+        <image src="{{item}}" mode="widthFlex"/>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+
+

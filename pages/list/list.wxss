@@ -1,7 +1,13 @@
 /* pages/detail/detail.wxss */
+
 .list_box{
   position: relative;
   background-color: #eee;
+}
+swiper{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
 }
 .swiper-tab{
   width: 100%;
@@ -24,7 +30,7 @@
   border-bottom: 4rpx solid #398bf7;
 }
 .sw_box{
-  height: 100px;
+  /* height: 100px; */
   overflow-y:scroll;
 }
 
@@ -50,4 +56,12 @@
 }
 .view_cot{
   height: 100%;
+}
+.list_page{
+  width: 100%;
+  /* height: 500rpx; */
+  background: #fff;
+}
+.item-containaer{
+  margin-bottom: 20rpx;
 }

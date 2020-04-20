@@ -1,0 +1,43 @@
+/* components/g-ui/g-panel/index.wxss */
+.page_lr{
+  padding: 0 10px;
+}
+.g-panel-container {
+  margin: 10px;
+}
+.noRow{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.g-panel-box{
+  padding: 20px;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+
+.panel_type{
+  
+}
+
+.g-panel-echart{
+
+}
+.g-panel-title-box {
+  width: 100%;
+  height: 70rpx;
+  border-bottom: 1px solid #e8e8e8;
+}
+.g-panel-title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 70rpx;
+}
+.g-panel-content-box{
+
+}
+.g-panel-content{
+  /* position: relative; */
+  min-height: 500rpx;
+}
+

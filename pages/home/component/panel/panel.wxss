@@ -1,7 +1,0 @@
-/* pages/home/component/panel/panel.wxss */
-.page_lr{
-  padding: 0 10px;
-}
-.g_rd{
-  border-radius: 8px;
-}

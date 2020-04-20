@@ -4,16 +4,22 @@
     "pages/list/list",
     "pages/collect/collect",
     "pages/user/user",
-    "pages/index/index",
     "pages/logs/logs",
-    "pages/home/pages/search",
+    "pages/home/pages/search/search",
     "pages/list/pages/musicList/musicList"
   ],
+  "usingComponents": {
+    "g-swiper": "/components/g-ui/g-swiper/index",
+    "g-panel": "/components/g-ui/g-panel/index",
+    "g-grid": "/components/g-ui/g-grid/index",
+    "g-buttonGroup": "/components/g-ui/g-buttonGroup/index",
+    "ec-canvas": "/components/common/ec-canvas/ec-canvas"
+  },
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#398bf7",
     "navigationBarTitleText": "Go部落",
-    "navigationBarTextStyle": "white",            
+    "navigationBarTextStyle": "white",
     "backgroundColorTop": "#fff",
     "enablePullDownRefresh": true,
     "onReachBottomDistance": 50,
@@ -50,5 +56,15 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "subway": {
+      "version": "1.0.4",
+      "provider": "wx6aaf93c4435fa1c1"
+    },
+    "routePlan": {
+      "version": "1.0.3",
+      "provider": "wx50b5593e81dd937a"
+    }
+  }
 }

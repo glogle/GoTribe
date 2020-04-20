@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class="bg_img_box">
-    <image src="/imgs/user/haizei.png" class="bg_img"></image>
+    <image src="https://images.unsplash.com/photo-1551446591-142875a901a1?w=640" class="bg_img"></image>
     <image src="/imgs/user/config.png" class="set_btn"></image>
       <view class="userinfo">
         <view class="user_box">

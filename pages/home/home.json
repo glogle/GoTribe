@@ -1,8 +1,4 @@
 {
-  "usingComponents": {
-    "swiper":"/components/swiper/swiper",
-    "grids":"/pages/home/component/grid/grid",
-    "panel":"/pages/home/component/panel/panel"
-
-  }
+  "component": true,
+  "usingComponents": {}
 }

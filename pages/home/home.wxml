@@ -10,7 +10,12 @@
         </label>
     </view>
 </view> 
-  <swiper imgData="{{imgUrls}}"></swiper>
-  <grids></grids>
-  <panel></panel>
+  <g-swiper imgData="{{imgUrls}}"></g-swiper>
+  <g-buttonGroup bind:tap="handleClike" data="{{grids}}"></g-buttonGroup>
+  <!-- <grids></grids> -->
+  <g-panel>
+    <view class="container" solt="g-panel-content-slot">
+      <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}" bind:init="echartInit"></ec-canvas>
+    </view>
+  </g-panel>
 </view>

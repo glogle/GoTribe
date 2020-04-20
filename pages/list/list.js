@@ -2,7 +2,7 @@
 var app = getApp()
 Page({
   data: { 
-    currentTab: 3,
+    currentTab: 0,
     list:[
       {
         id:0,
@@ -32,6 +32,7 @@ Page({
         success: function (res) {
           _.setData({
             heights: res.windowHeight - rect[0].height
+            // heights:100
           });
         },
       })
@@ -81,5 +82,40 @@ Page({
         currentTab: e.target.dataset.current
       })
     }
+  },
+
+  // handleGotoMap: function(){
+  //   const key = 'BH5BZ-WE7L5-N7LIL-QA5I7-7S5SS-QDBZ5'; //使用在腾讯位置服务申请的key
+  //   const referer = 'Go部落'; //调用插件的app的名称
+  //   const location = JSON.stringify({
+  //     latitude: 39.89631551,
+  //     longitude: 116.323459711
+  //   });
+  //   // const category = '生活服务,娱乐休闲';
+
+  //   wx.navigateTo({
+  //     url: 'plugin://chooseLocation/index?key=' + key + '&referer=' + referer + '&location=' + location + '&category=' + category
+  //   });
+  // },
+  handleGotoMap2: function(){
+    let plugin = requirePlugin("subway");
+    const key = 'BH5BZ-WE7L5-N7LIL-QA5I7-7S5SS-QDBZ5'; //使用在腾讯位置服务申请的key
+    const referer = 'Go部落'; //调用插件的app的名称
+    wx.navigateTo({
+      url: 'plugin://subway/index?key=' + key + '&referer=' + referer
+    });
+  },
+  handleGotoMap3: function(){
+    let plugin = requirePlugin('routePlan');
+    const key = 'BH5BZ-WE7L5-N7LIL-QA5I7-7S5SS-QDBZ5'; //使用在腾讯位置服务申请的key
+    const referer = 'Go部落'; //调用插件的app的名称
+    let endPoint = JSON.stringify({  //终点
+      'name': '吉野家(北京西站北口店)',
+      'latitude': 39.89631551,
+      'longitude': 116.323459711
+    });
+    wx.navigateTo({
+      url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
+    });
   }
 })
