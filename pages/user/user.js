@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const AUTH_MODE = 'fingerPrint' // 指纹识别
 
 Page({
   data: {
@@ -49,6 +50,64 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  toLogin() {
+    const startSoterAuthentication = () => {
+      wx.startSoterAuthentication({
+        requestAuthModes: [AUTH_MODE],
+        challenge: 'test',
+        authContent: '小程序示例',
+        success: (res) => {
+          wx.showToast({
+            title: '认证成功'
+          })
+        },
+        fail: (err) => {
+          console.error(err)
+          wx.showModal({
+            title: '失败',
+            content: '认证失败',
+            showCancel: false
+          })
+        }
+      })
+    }
+
+    const checkIsEnrolled = () => {
+      wx.checkIsSoterEnrolledInDevice({
+        checkAuthMode: AUTH_MODE,
+        success: (res) => {
+          console.log(res)
+          if (parseInt(res.isEnrolled) <= 0) {
+            wx.showModal({
+              title: '错误',
+              content: '您暂未录入指纹信息，请录入后重试',
+              showCancel: false
+            })
+            return
+          }
+          startSoterAuthentication();
+        },
+        fail: (err) => {
+          console.error(err)
+        }
+      })
+    }
+
+    wx.checkIsSupportSoterAuthentication({
+      success: (res) => {
+        console.log(res)
+        checkIsEnrolled()
+      },
+      fail: (err) => {
+        console.error(err)
+        wx.showModal({
+          title: '错误',
+          content: '您的设备不支持指纹识别',
+          showCancel: false
+        })
+      }
     })
   }
 })

@@ -12,7 +12,8 @@
           </block>
         </view>
       </view>
-      <btn></btn>
-      <btn></btn>
+      <!-- <btn></btn>
+      <btn></btn> -->
+      <button bindtap="toLogin">登录</button>
   </view>
 </view>
