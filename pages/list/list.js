@@ -2,7 +2,7 @@
 var app = getApp()
 Page({
   data: { 
-    currentTab: 0,
+    currentTab: 1, // 当前tab位置
     list:[
       {
         id:0,

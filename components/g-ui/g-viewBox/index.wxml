@@ -1,0 +1,19 @@
+<!--components/g-ui/g-viewBox/index.wxml-->
+<view class="g-viewBox">
+  <view class="tabBnt menuL" style="width:{{menuWidth}}rpx;"  wx:if="{{menuSite === 'left'}}">
+    <scroll-view scroll-y="true" style="height: {{height}}px;" class="menu">
+        <view class="menu_option" wx:for="111111111111111111111111111111111111111111" wx:key="*this" wx:for-item="item" wx:for-index="index">{{index}}</view>
+    </scroll-view>
+  </view>
+  <view class="viewBox" style="height: {{height}}px;">
+    <scroll-view scroll-y="true" style="height: {{height}}px;" class="scrollView">
+        <view class="item-containaer" wx:for="111111111111111111111" wx:key="*this" wx:for-item="item" wx:for-index="index">{{index}}</view>
+    </scroll-view>
+  </view>
+  <view class="tabBnt menuR" style="width:{{menuWidth}}rpx;" wx:if="{{menuSite === 'right'}}" >
+    <scroll-view scroll-y="true" style="height: {{height}}px;" class="menu">
+        <view class="menu_option" wx:for="111111111111111111111111111111111111111111" wx:key="*this" wx:for-item="item" wx:for-index="index">{{index}}</view>
+    </scroll-view>
+  </view>
+</view>
+

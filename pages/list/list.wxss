@@ -48,7 +48,7 @@ swiper{
 .g_switme{
   padding:10px;
   height: 100%;
-
+  /* overflow: hidden; */
   box-sizing: border-box;
 }
 .viewbox{
@@ -64,4 +64,8 @@ swiper{
 }
 .item-containaer{
   margin-bottom: 20rpx;
+}
+
+.g-viewBox{
+  border-radius: 10rpx;
 }

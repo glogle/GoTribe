@@ -4,9 +4,7 @@
   height: 246rpx;
 
 }
-/* .buttonGroupComtainer swiper{
-  height: 100%;
-} */
+
 .g_flex{
   padding: 20rpx 0;
   background-color: #eee;
@@ -18,6 +16,7 @@
   border-radius: 16rpx;
   background-color: #fff;
   flex-wrap:wrap ;
+  padding: 20rpx 0;
 
 }
 #g_item_box{

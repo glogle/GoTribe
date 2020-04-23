@@ -1,0 +1,44 @@
+/* components/g-ui/g-viewBox/index.wxss */
+.g-viewBox{
+  /* width: 100%; */
+  display: flex;
+  overflow: hidden;
+}
+.tabBnt {
+  border-radius: 10rpx;
+  
+}
+.menu{
+  box-sizing: border-box;
+}
+.menu_option{
+  width: 100%;
+  height: 70rpx;
+  padding: 0 10rpx;
+  margin-top: 10rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+.menu_option:nth-child(1){
+  margin: 0;
+}
+.viewBox {
+  flex: 1;
+  border-radius: 10rpx;
+  background-color: #eee;
+}
+.scrollView{
+  padding: 10rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  background-color: orange;
+}
+.menuL{
+  margin-right: 10rpx;
+}
+.menuR{
+  margin-left: 10rpx;
+}
