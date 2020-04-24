@@ -1,6 +1,7 @@
 //app.js
 // import 'assets/api/listen1-api.min.js'
 const config = require('./config/index.js')
+const comFn = require('./utils/common.js')
 App({
   globalData:{
     txKey:'e16f8d4f026123c6b0deb96324b7e1c5'
@@ -8,6 +9,7 @@ App({
   //应用程序启动
   onLaunch: function () {
     this.config = config
+    this.comFn = comFn
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

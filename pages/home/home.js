@@ -1,8 +1,7 @@
 // pages/home/home.js
 
 import * as echarts from '../../components/common/ec-canvas/echarts';
-
-const app = getApp();
+const {comFn} = getApp();
 
 function initChart(canvas, width, height) {
   const chart = echarts.init(canvas, null, {
@@ -151,6 +150,11 @@ Page({
    */
   onReachBottom: function () {
 
+  },
+
+  handleComs() {
+    let data = [{ title: '青菜类', children: [{ anme: '白菜', image: '', price: 123 }, { anme: '油麦菜', image: '', price: 673 }] }, { title: '肉类', children: [{ anme: '猪肉', image: '', price: 123 }, { anme: '鱼肉', image: '', price: 673 }] }]
+    return console.log(comFn.deepClone(data))
   },
 
   /**

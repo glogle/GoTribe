@@ -10,7 +10,7 @@ Component({
     },
     menuSite:{
       type: String,
-      value: 'right'
+      value: 'left'
     },
     menuWidth: {
       type: Number,

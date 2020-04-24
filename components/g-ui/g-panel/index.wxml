@@ -1,13 +1,15 @@
 <!--components/g-ui/g-panel/index.wxml-->
 <view class="g-panel-container g_rd">
   <view class="g-panel-box g_rd">
-    <view class="panel_type" wx:if="{{type === '1'}}">
+    <view class="panel_type" wx:if="{{type === '1'}}" bindtap="handleCom">
       <view class="g-panel-title-box noRow">
         <text class="g-panel-title ">这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题</text>
         <slot name="g-panel-title-slot">这个是标题这个是标题这个是标题这个是标题这个是标题这个是标题</slot>
       </view>
       <view class="g-panel-content-box">
-        <view class="g-panel-content"></view>
+        <view class="g-panel-content">
+        
+        </view>
         <slot name="g-panel-content-slot" class="g-panel-content"></slot>
         <slot></slot>
       </view>
