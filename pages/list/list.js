@@ -2,7 +2,7 @@
 var app = getApp()
 Page({
   data: { 
-    currentTab: 1, // 当前tab位置
+    currentTab: 0, // 当前tab位置
     list:[
       {
         id:0,
@@ -117,5 +117,8 @@ Page({
     wx.navigateTo({
       url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
     });
+  },
+  handleGotoMap4: function () {
+    
   }
 })

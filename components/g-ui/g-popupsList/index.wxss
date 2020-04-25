@@ -1,0 +1,7 @@
+/* components/g-ui/g-popupsList/index.wxss */
+.g-popupsList_box {
+  background-color: orange;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+}

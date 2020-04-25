@@ -18,6 +18,8 @@ Component({
     },
     height: Number
   },
+  
+
 
   /**
    * 组件的初始数据

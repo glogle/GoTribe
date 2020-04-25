@@ -1,0 +1,12 @@
+<!--components/g-ui/g-popupsList/index.wxml-->
+<view  class="g-popupsList_box" bindtouchstart="handletouchtart" bindtouchmove="handletouchmove">
+  <view class="">1111111</view>
+  <view class="">1111111</view>
+  <view class="">1111111</view>
+  <view class="">1111111</view>
+  <view class="">1111111</view>
+  <view class="">1111111</view>
+  <view class="">1111111</view>
+  <view class="">1111111</view>
+  <view class="">22222</view>
+</view>

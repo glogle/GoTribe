@@ -4,7 +4,9 @@
         "panel": "/pages/list/component/panel/panel",
         "gridlist": "/pages/list/component/grid/grid",
         "music": "/pages/list/component/music/music",
-        "g-viewBox": "/components/g-ui/g-viewBox/index"
+        "g-viewBox": "/components/g-ui/g-viewBox/index",
+        "g-calendar": "/components/g-ui/g-calendar/index",
+        "g-popupsList": "/components/g-ui/g-popupsList/index"
   }
   
 }
