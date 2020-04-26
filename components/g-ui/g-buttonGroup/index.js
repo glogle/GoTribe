@@ -98,10 +98,7 @@ Component({
     },
     //事件处理函数
     bindEpidemicSituation: function (e) {
-      console.log(e)
-      // wx.navigateTo({
-      //   url: '../home/pages/search/search'
-      // })
+      this.triggerEvent('handleBntFn', e.currentTarget)
     },
     changeIndicatorDots(e) {
       this.setData({

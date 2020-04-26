@@ -28,6 +28,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    handleClike: function (e) {
+      console.log(e,'事件')
+    },
 
     handletouchmove: function (event) {
       // console.log(event)
@@ -58,7 +61,7 @@ Component({
       this.setData({
         text: text,
       });
-
+      console.log(text)
     },
     handletouchtart: function (event) {
       // console.log(event)

@@ -54,6 +54,7 @@ function initChart(canvas, width, height) {
 }
 
 Page({
+
   /**
    * 页面的初始数据
    */
@@ -74,11 +75,12 @@ Page({
     ],
     grids: [
       {
-        title: '疫情',
+        title: '地铁',
         icone: '/imgs/icons/-_1.png',
         path: 'pages/home/pages/epidemicSituation/epidemicSituation'
       }, {
         title: '地图',
+        pluginId: '',
         icone: '/imgs/icons/-_1.png',
         path: 'pages/home/pages/epidemicSituation/epidemicSituation'
       }, {
@@ -97,6 +99,40 @@ Page({
     ],
   },
   //事件处理函数
+
+  handleBntFn: function (e) {
+    console.log(e)
+    if (e.detail.id === "地铁") {
+      this.handleGotoMap2()
+    } else if (e.detail.id === "地图") {
+      this.handleGotoMap3()
+    }
+  },
+  // 地图线路
+  handleGotoMap2: function () {
+    let plugin = requirePlugin("subway");
+    const key = 'BH5BZ-WE7L5-N7LIL-QA5I7-7S5SS-QDBZ5'; //使用在腾讯位置服务申请的key
+    const referer = 'Go部落'; //调用插件的app的名称
+    wx.navigateTo({
+      url: 'plugin://subway/index?key=' + key + '&referer=' + referer
+    });
+  },
+
+  // 路线规划
+  handleGotoMap3: function () {
+    let plugin = requirePlugin('routePlan');
+    const key = 'BH5BZ-WE7L5-N7LIL-QA5I7-7S5SS-QDBZ5'; //使用在腾讯位置服务申请的key
+    const referer = 'Go部落'; //调用插件的app的名称
+    let endPoint = JSON.stringify({  //终点
+      'name': '吉野家(北京西站北口店)',
+      'latitude': 39.89631551,
+      'longitude': 116.323459711
+    });
+    wx.navigateTo({
+      url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
+    });
+  },
+
   bindViewTap: function () {
     wx.navigateTo({
       url: '../home/pages/search/search'
@@ -172,8 +208,5 @@ Page({
   echartInit(e) {
     initChart(e.detail.canvas, e.detail.width, e.detail.height);
   },
-  handleClike(e){
-    console.log(e,'///////')
-  }
 })
 

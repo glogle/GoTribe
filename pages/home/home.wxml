@@ -1,5 +1,5 @@
 <view>
-<view class="g_pd">
+  <view class="g_pd">
     <view class="weui-search-bar__form ">
         <view class="weui-search-bar__box">
             <view class="weui-search-bar__input" ></view>
@@ -11,9 +11,8 @@
     </view>
 </view> 
   <g-swiper imgData="{{imgUrls}}"></g-swiper>
-  <g-buttonGroup bind:tap="handleClike" data="{{grids}}"></g-buttonGroup>
+  <g-buttonGroup bind:handleBntFn="handleBntFn" data="{{grids}}"></g-buttonGroup>
   <!-- <grids></grids> -->
-  <button bindtap="handleComs">函数测试</button>
   <g-panel>
     <view class="container" solt="g-panel-content-slot">
       <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}" bind:init="echartInit"></ec-canvas>

@@ -6,7 +6,8 @@
     "pages/user/user",
     "pages/logs/logs",
     "pages/home/pages/search/search",
-    "pages/list/pages/musicList/musicList"
+    "pages/list/pages/musicList/musicList",
+    "components/g-ui/g-details/index"
   ],
   "usingComponents": {
     "g-swiper": "/components/g-ui/g-swiper/index",
@@ -21,7 +22,7 @@
     "navigationBarTitleText": "Go部落",
     "navigationBarTextStyle": "white",
     "backgroundColorTop": "#fff",
-    "enablePullDownRefresh": true,
+    "enablePullDownRefresh": false,
     "onReachBottomDistance": 50,
     "backgroundColor": "#000"
   },
@@ -43,7 +44,7 @@
         "selectedIconPath": "imgs/icons/icon-test_12.png"
       },
       {
-        "pagePath": "pages/collect/collect",
+        "pagePath": "components/g-ui/g-details/index",
         "text": "收藏",
         "iconPath": "imgs/icons/icon-test_11.png",
         "selectedIconPath": "imgs/icons/icon-test_14.png"

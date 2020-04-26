@@ -22,7 +22,7 @@
 		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.8.0",
+	"libVersion": "2.11.0",
 	"appid": "wx4713285d56af760e",
 	"projectname": "Go%E9%83%A8%E8%90%BD",
 	"debugOptions": {
@@ -80,6 +80,13 @@
 					"id": -1,
 					"name": "我的",
 					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收藏2",
+					"pathName": "components/g-ui/g-details/index",
 					"scene": null
 				}
 			]

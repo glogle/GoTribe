@@ -7,30 +7,35 @@
   </view>
 
   <view class="sw_box">
-    <swiper current="{{currentTab}}" duration="300" bindchange="swiperTab" style="height:{{heights+'px'}};">
+    <swiper current="{{currentTab}}" duration="300" bindchange="swiperTab" style="height:{{heights}}px;">
       <swiper-item class="g_switme">
         <scroll-view scroll-y="true" style="height:{{heights-20}}px;">
           <!-- <button bindtap="handleGotoMap">我的地图选点</button> -->
           <button bindtap="handleGotoMap2">地铁路线</button>
           <button bindtap="handleGotoMap3">路线规划</button>
           <button bindtap="handleGotoMap4">上划列表</button>
-          <g-popupsList height="{{heights-20}}"></g-popupsList>
+          <g-popupsList id="popups" height="{{heights-20}}"></g-popupsList>
         </scroll-view>
       </swiper-item>
       <swiper-item class="g_switme">
-        <!-- <scroll-view scroll-y="true" style="height:{{heights+'px'}};">
+        <!-- <scroll-view scroll-y="true" style="height:{{heights}}px;">
           <panel></panel>
         </scroll-view> -->
         <g-viewBox class="g-viewBox" height="{{heights-20}}"></g-viewBox>
       </swiper-item>
       <swiper-item class="g_switme">
-        <scroll-view scroll-y="true" style="height:{{heights+'px'}};">
+        <scroll-view scroll-y="true" style="height:{{heights}}px;">
           <g-calendar></g-calendar>
         </scroll-view>
       </swiper-item>
       <swiper-item class="g_switme">
-        <scroll-view scroll-y="true" style="height:{{heights+'px'}};">
+        <scroll-view scroll-y="true" style="height:{{heights}}px;">
           <music datas="{{datas}}"></music>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item class="g_switme">
+        <scroll-view scroll-y="true" style="height:{{heights}}px;">
+          <g-details></g-details>
         </scroll-view>
       </swiper-item>
     </swiper>

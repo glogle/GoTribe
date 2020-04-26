@@ -6,19 +6,23 @@ Page({
     list:[
       {
         id:0,
-        title:'小说',
+        title:'组件1',
         data:'小说'
       }, {
         id:1,
-        title: '漫画',
+        title: '组件2',
         data: '漫画'
       }, {
         id:2,
-        title: '视频',
+        title: '组件3',
         data: '视频'
       }, {
         id:3,
-        title: '音乐',
+        title: '组件4',
+        data: '音乐'
+      }, {
+        id:4,
+        title: '组件5',
         data: '音乐'
       }
     ],
@@ -118,7 +122,14 @@ Page({
       url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
     });
   },
-  handleGotoMap4: function () {
-    
+  handleGotoMap4: function (e) {
+    this.animate('#popups', [
+      { transform: ' translateY(-200px)', rotate: 0},
+      { transform: ' translateY(0px)', rotate: 90}
+    ], 1000, function () {
+        this.clearAnimation('#popups', { translate: true, rotate: false }, function () {
+        console.log("清除了#popups上的opacity和rotate属性")
+      })
+    }.bind(this))
   }
 })
