@@ -1,8 +1,10 @@
 /* components/g-ui/g-viewBox/index.wxss */
 .g-viewBox{
-  /* width: 100%; */
   display: flex;
   overflow: hidden;
+}
+.changeSiteR {
+  flex-direction: row-reverse;
 }
 .tabBnt {
   border-radius: 10rpx;
@@ -41,4 +43,12 @@
 }
 .menuR{
   margin-left: 10rpx;
+}
+.item-containaer{
+  height: 500rpx;
+  border-bottom: 1px solid #fff;
+}
+.selectOption {
+  background-color: orange;
+  color: #fff;
 }

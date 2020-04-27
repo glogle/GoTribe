@@ -2,6 +2,7 @@
 var app = getApp()
 Page({
   data: { 
+    status: false,
     currentTab: 0, // 当前tab位置
     list:[
       {
@@ -20,10 +21,6 @@ Page({
         id:3,
         title: '组件4',
         data: '音乐'
-      }, {
-        id:4,
-        title: '组件5',
-        data: '音乐'
       }
     ],
     datas:'',
@@ -36,7 +33,6 @@ Page({
         success: function (res) {
           _.setData({
             heights: res.windowHeight - rect[0].height
-            // heights:100
           });
         },
       })
@@ -114,22 +110,20 @@ Page({
     const key = 'BH5BZ-WE7L5-N7LIL-QA5I7-7S5SS-QDBZ5'; //使用在腾讯位置服务申请的key
     const referer = 'Go部落'; //调用插件的app的名称
     let endPoint = JSON.stringify({  //终点
-      'name': '吉野家(北京西站北口店)',
-      'latitude': 39.89631551,
-      'longitude': 116.323459711
+      'name': '',
+      'latitude': null,
+      'longitude': null
     });
     wx.navigateTo({
       url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
     });
   },
   handleGotoMap4: function (e) {
-    this.animate('#popups', [
-      { transform: ' translateY(-200px)', rotate: 0},
-      { transform: ' translateY(0px)', rotate: 90}
-    ], 1000, function () {
-        this.clearAnimation('#popups', { translate: true, rotate: false }, function () {
-        console.log("清除了#popups上的opacity和rotate属性")
-      })
-    }.bind(this))
+    if(e){
+      this.selectComponent("#popups").showBox()
+    }
+    // this.setData({
+    //   status: !this.data.status
+    // })
   }
 })

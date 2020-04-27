@@ -1,5 +1,5 @@
 <!--components/g-ui/g-popupsList/index.wxml-->
-<view  class="g-popupsList_box" capture-catch:touchstart="handletouchtart"  capture-catch:touchmove="handletouchmove">
+<view id="gBox"  class="g-popupsList_box" capture-catch:touchstart="handletouchtart"  capture-catch:touchmove="handletouchmove">
   <view class="">1111111</view>
   <view class="">1111111</view>
   <view class="">1111111</view>

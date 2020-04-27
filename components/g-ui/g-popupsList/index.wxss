@@ -3,6 +3,7 @@
   background-color: orange;
   position: absolute;
   width: 100vw;
-  bottom: 0;
+  bottom: -200px;
   z-index: 99;
+  
 }

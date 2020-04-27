@@ -14,7 +14,7 @@
           <button bindtap="handleGotoMap2">地铁路线</button>
           <button bindtap="handleGotoMap3">路线规划</button>
           <button bindtap="handleGotoMap4">上划列表</button>
-          <g-popupsList id="popups" height="{{heights-20}}"></g-popupsList>
+          <g-popupsList id="popups" status="{{status}}"></g-popupsList>
         </scroll-view>
       </swiper-item>
       <swiper-item class="g_switme">
@@ -33,11 +33,11 @@
           <music datas="{{datas}}"></music>
         </scroll-view>
       </swiper-item>
-      <swiper-item class="g_switme">
+      <!-- <swiper-item class="g_switme">
         <scroll-view scroll-y="true" style="height:{{heights}}px;">
           <g-details></g-details>
         </scroll-view>
-      </swiper-item>
+      </swiper-item> -->
     </swiper>
   </view>
 </view>
