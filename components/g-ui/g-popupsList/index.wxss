@@ -1,9 +1,11 @@
 /* components/g-ui/g-popupsList/index.wxss */
 .g-popupsList_box {
   background-color: orange;
-  position: absolute;
-  width: 100vw;
-  bottom: -200px;
+  position: fixed;
+  width: 100%;
+  height: 0;
+  bottom: 0;
   z-index: 99;
-  
+  margin-left: -20rpx;
+  box-sizing: border-box;
 }

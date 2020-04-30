@@ -1,10 +1,10 @@
 // 数据类型判断
-export function type(data) {
+ function type(data) {
   return Object.prototype.toString.call(data).slice(8,-1)
 }
 
 // 函数防抖
-export function debounce(func, wait) {
+ function debounce(func, wait) {
   let timer;
   return function () {
     let context = this; // 注意 this 指向
@@ -19,7 +19,7 @@ export function debounce(func, wait) {
 }
 
 // 函数节流
-export function throttle(fn, interval = 300) {
+ function throttle(fn, interval = 300) {
    let canRun = true;
   return function () {
     if (!canRun) return;
@@ -56,7 +56,8 @@ function deepClone(data) {
   }
 }
 module.exports = {
-  type,
-  throttle,
-  deepClone
+  type, // 类型判断
+  debounce, // 防抖
+  throttle, // 节流
+  deepClone, // 深复制
 }

@@ -22,24 +22,10 @@ Component({
     lastX: 0,
     lastY: 0,
     text: "没有滑动",
+    toUp: false
   },
-  // observers:{
-  //   'status': function (e){
-  //     console.log(e,'status////////////////')
-  //     if (!e) {
-  //       this.animate('#gBox', [
-  //         { opacity: 1.0, bottom: '-200px'},
-  //         { opacity: 1.0, bottom: '0',  ease: 'ease-in', offset: 0.9},
-  //       ], 300, function () {
-  //         this.clearAnimation('#gBox', { opacity: true, rotate: true }, function () {
-  //           console.log("清除了#gBox上的opacity和rotate属性")
-  //         })
-  //       }.bind(this))
-  //     }
-  //   }
-  // },
   lifetimes: {
-    attached: function () {
+    attached () {
       
     }
   },
@@ -48,48 +34,60 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    showBox: function () {
-
-      if (this.data.status) return
+    showBox () {
+      if (this.data.status || this.data.toUp ) return
         this.setData({
           status: true
         })
       this.animate('#gBox', [
-        { opacity: 1.0, bottom: '-200px' },
-        { opacity: 1.0, bottom: '0', ease: 'ease-in', offset: 0.9 },
-        { opacity: 1.0, bottom: '0', ease: 'ease-in', offset: 0.9 },
-        { opacity: 1.0, bottom: '0', ease: 'ease-in', offset: 0.9 },
-        { opacity: 1.0, bottom: '0', ease: 'ease-in', offset: 0.9 },
-      ], 300, function () {
-        this.clearAnimation('#gBox', { opacity: true, rotate: true }, function () {
-          console.log("清除了#gBox上的opacity和rotate属性")
-        })
-      }.bind(this))
+        { height: '0' },
+        { height: '500rpx' },
+      ], 300)
     },
 
-    hideBox:function () {
-      if(!this.data.status) return
-      console.log(this.data.status,'sdfjsdkfhkj')
-      this.animate('#gBox', [
-        { opacity: 1.0, bottom: '0' },
-        { opacity: 1.0, bottom: '-200px', ease: 'ease-in', offset: 0.9 },
-      ], 300, function () {
-        this.clearAnimation('#gBox', { opacity: true, rotate: true }, function () {
-          console.log("清除了#gBox上的opacity和rotate属性")
-        })
-      }.bind(this))
+    hideBox () {
+      if (!this.data.status || this.data.toUp) return
       this.setData({
         status: false
       })
-    },
+      this.animate('#gBox', [
+        { height: '500rpx' },
+        { height: '0' },
+      ], 300)
 
-    handletouchmove: function (event) {
+    },
+    toUpBox() {
+      if (this.data.toUp) return
+      this.animate('#gBox', [
+        { height: '500rpx' },
+        { height: '100vh' },
+      ], 300,()=>{
+        this.setData({
+          toUp: true
+        })
+      })
+    },
+    toDown() {
+      if (!this.data.toUp) return
+      console.log('toDown')
+      this.animate('#gBox', [
+        { height: '100vh' },
+        { height: '500rpx' },
+      ], 300,()=>{
+        this.setData({
+          toUp: false
+        })
+      })
+    },
+    handletouchmove (event) {
       let currentX = event.touches[0].pageX
       let currentY = event.touches[0].pageY
       let tx = currentX - this.data.lastX
       let ty = currentY - this.data.lastY
       let text = ""
-
+      let myBox = wx.createSelectorQuery().select('#gBox')
+      console.log(myBox,'\\\\\\\?????')
+      
       if (Math.abs(tx) > Math.abs(ty)) {
         //左右方向滑动
         if (tx < 0)
@@ -99,10 +97,13 @@ Component({
       }
       else {
         //上下方向滑动
-        if (ty < 0)
+        if (ty < 0){
+          this.toUpBox()
           text = "向上滑动"
+        }
         else if (ty > 0){
           this.hideBox()
+          this.toDown()
           text = "向下滑动"
         }
       }
@@ -115,11 +116,17 @@ Component({
       });
       console.log(text)
     },
-    handletouchtart: function (event) {
+    handletouchtart (event) {
       // console.log(event)
       // 赋值
       this.data.lastX = event.touches[0].pageX
       this.data.lastY = event.touches[0].pageY
+    },
+    handletouchend (e) {
+      console.log(e,'handletouchend')
+    },
+    handleMycllike (e) {
+      this.hideBox()
     }
   }
 })
