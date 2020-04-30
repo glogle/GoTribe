@@ -18,6 +18,7 @@ Component({
    * 组件的初始数据
    */
   data: {
+    gheights: '',
     status: false,
     lastX: 0,
     lastY: 0,
@@ -85,8 +86,20 @@ Component({
       let tx = currentX - this.data.lastX
       let ty = currentY - this.data.lastY
       let text = ""
-      let myBox = wx.createSelectorQuery().select('#gBox')
-      console.log(myBox,'\\\\\\\?????')
+      // let myBox = wx.createSelectorQuery().select('#gBox')
+      
+      var _ = this
+      wx.createSelectorQuery().selectAll('.popupsList_box').boundingClientRect(function (rect) {
+        wx.getSystemInfo({
+          success:  res => {
+            _.setData({
+              gheights: res.windowHeight + currentY
+            });
+            console.log(res, _.data.gheights, '\\\\\\\?????')
+          },
+        })
+      　　}).exec()
+      // this.getData()
       
       if (Math.abs(tx) > Math.abs(ty)) {
         //左右方向滑动
@@ -98,12 +111,12 @@ Component({
       else {
         //上下方向滑动
         if (ty < 0){
-          this.toUpBox()
+          // this.toUpBox()
           text = "向上滑动"
         }
         else if (ty > 0){
-          this.hideBox()
-          this.toDown()
+          // this.hideBox()
+          // this.toDown()
           text = "向下滑动"
         }
       }

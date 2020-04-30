@@ -1,4 +1,4 @@
 <!--components/g-ui/g-popupsList/index.wxml-->
-<view id="gBox"  class="g-popupsList_box"  capture-catch:touchstart="handletouchtart"  capture-catch:touchmove="handletouchmove">
+<view id="gBox"  class="g-popupsList_box" style=":{{gheights? 'height:'+gheights+'px':''}}" capture-catch:touchstart="handletouchtart"  capture-catch:touchmove="handletouchmove">
   <slot></slot>
 </view>

@@ -14,6 +14,7 @@
           <button bindtap="handleGotoMap2">地铁路线</button>
           <button bindtap="handleGotoMap3">路线规划</button>
           <button bindtap="handleGotoMap4">上划列表</button>
+          <button bindtap="handleGotoMap5">修改背景</button>
           <!-- <image src="cloud://dev-xf1of.6465-dev-xf1of-1300924523/images/icon/icon-test_11.png"></image> -->
           <g-popupsList id="popups" status="{{status}}"></g-popupsList>
         </scroll-view>

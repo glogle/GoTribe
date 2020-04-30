@@ -8,19 +8,23 @@ Page({
       {
         id:0,
         title:'组件1',
-        data:'小说'
+        data:'小说',
+        bgColor: '#ff0000'
       }, {
         id:1,
         title: '组件2',
-        data: '漫画'
+        data: '漫画',
+        bgColor: '#00ff00'
       }, {
         id:2,
         title: '组件3',
-        data: '视频'
+        data: '视频',
+        bgColor: '#0000ff'
       }, {
         id:3,
         title: '组件4',
-        data: '音乐'
+        data: '音乐',
+        bgColor: '#f0000f'
       }
     ],
     datas:'',
@@ -71,6 +75,7 @@ Page({
     that.setData({
       currentTab: e.detail.current
     });
+    this.handleGotoMap5(e.detail.current)
   },
   //点击切换
   clickTab: function (e) {
@@ -125,5 +130,15 @@ Page({
     // this.setData({
     //   status: !this.data.status
     // })
+  },
+  handleGotoMap5: function (tab) {
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: this.data.list[tab].bgColor,
+      animation: {
+        duration: 400,
+        timingFunc: 'easeOut'
+      }
+    })
   }
 })
