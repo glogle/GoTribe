@@ -1,3 +1,4 @@
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
 @import 'style/weui.wxss';
 
 page{
@@ -54,4 +55,19 @@ page{
   display:-webkit-box;
   -webkit-line-clamp:2;
   -webkit-box-orient:vertical;
+}
+
+.mt20 {
+  margin-top: 20rpx;
+}
+.mt30 {
+  margin-top: 30rpx;
+}
+.mt40 {
+  margin-top: 40rpx;
+}
+
+.prl20 {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
 }

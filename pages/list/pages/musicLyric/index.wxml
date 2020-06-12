@@ -1,0 +1,7 @@
+<view class="music_lyric_box view_lyric">
+  <scroll-view class="music_lyric_box" scroll-y="true">
+    <view class="lrclink_style_box">
+      <text class="lrclink_style">{{lrclink}}</text>
+    </view>
+  </scroll-view>
+</view>

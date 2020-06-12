@@ -98,7 +98,8 @@ Component({
     },
     //事件处理函数
     bindEpidemicSituation: function (e) {
-      this.triggerEvent('handleBntFn', e.currentTarget)
+      this.triggerEvent('handleBntFn', e.currentTarget.dataset.taget)
+      // console.log(e.currentTarget,'bindEpidemicSituation')
     },
     changeIndicatorDots(e) {
       this.setData({

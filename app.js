@@ -2,14 +2,13 @@
 // import 'assets/api/listen1-api.min.js'
 const config = require('./config/index.js')
 const comFn = require('./utils/common.js')
+const musicApi = require('./api/musicApi.js')
 App({
-  globalData:{
-    txKey:'e16f8d4f026123c6b0deb96324b7e1c5'
-  },
   //应用程序启动
   onLaunch: function () {
-    this.config = config
+    // this.config = config
     this.comFn = comFn
+    this.musicApi = musicApi
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -42,9 +41,12 @@ App({
       }
     })
   },
+  config,
   globalData: {
     userInfo: null,
     latitude:null,
-    longitude:null
+    longitude:null,
+    config,
+    txKey: 'e16f8d4f026123c6b0deb96324b7e1c5'
   }
 });

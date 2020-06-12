@@ -1,6 +1,8 @@
 /* pages/list/pages/musicList/musicList.wxss */
 .musicListbox{
   padding: 10px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.774);
 }
 .listItem{
   width: 100%;
@@ -9,7 +11,7 @@
   display: flex;
   border-radius: 10px;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: rgba(31, 28, 28, 0.671);
   justify-content: space-between;
   margin-bottom: 10px;
 }
@@ -17,7 +19,7 @@
   width: 70px;
   height: 70px;
   margin-right: 10px;
-  background-color: #eee;
+  background-color: rgba(15, 15, 15, 0.671);
 
 }
 .list_cot{
@@ -35,5 +37,4 @@
 }
 .music_content{
   font-size: 12px;
-  background-color: #fff;
 }

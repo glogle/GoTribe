@@ -4,12 +4,13 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
+		"nodeModules": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
@@ -18,8 +19,7 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		},
-		"nodeModules": true
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.0",
@@ -87,6 +87,27 @@
 					"id": -1,
 					"name": "收藏2",
 					"pathName": "components/g-ui/g-details/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "mymusic",
+					"pathName": "pages/list/pages/myMusic/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "音乐列表",
+					"pathName": "pages/list/pages/musicList/musicList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "音乐首页",
+					"pathName": "pages/list/pages/musicHome/index",
 					"scene": null
 				}
 			]

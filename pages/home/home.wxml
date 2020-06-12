@@ -15,7 +15,6 @@
   <!-- <grids></grids> -->
   <g-panel>
     <view class="container" solt="g-panel-content-slot">
-      <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}" bind:init="echartInit"></ec-canvas>
     </view>
   </g-panel>
 </view>

@@ -1,0 +1,43 @@
+
+<view class="musicPlayBox">
+  <view class="play_header">
+    <view class="play_header_l" bindtap="goback">
+      <mp-icon icon="back" color="white" size="{{12}}"></mp-icon>
+    </view>
+    <view class="play_header_c"></view>
+    <view class="play_header_r"></view>
+  </view>
+  <!-- 播放图片 -->
+  <view class="play_image flexStyle">
+      <image bindtap="gotoLyric"  class="{{playStatus? 'music_animate music_record':'music_record'}}"   mode="scaleToFill" src="{{musicInfo.pic_premium}}"></image>
+    
+  </view>
+  <!-- 进度条 -->
+  <view class="play_progress_bar_box">
+     <progress class="play_progress_bar_line" percent="{{percent}}" active stroke-width="3" active-mode="forwards"/> 
+     <view class="play_progress_bar_info">{{percent}}:00 / 3:50</view>
+  </view>
+
+  <!-- 功能按钮组 -->
+  <view class="button_group">
+    <view class="mini_button">
+       <mp-icon icon="setting" color="white" size="{{20}}"></mp-icon>
+       <mp-icon icon="refresh" color="white" size="{{20}}"></mp-icon>
+       <mp-icon icon="like" color="white" size="{{20}}"></mp-icon>
+       <mp-icon icon="download" color="white" size="{{20}}"></mp-icon>
+       <mp-icon icon="note" color="white" size="{{20}}"></mp-icon>
+    </view>
+    <view class="play_buttom" >
+      <view class="play_buttom_item flexStyle play_Previous" data-flag="-" bindtap="previous_music" bindtouchend="speed_music_end" bindlongpress="speed_music_start">
+        <mp-icon icon="back2" color="white" size="{{50}}"></mp-icon>
+      </view>
+      <view class="play_buttom_item flexStyle play_sopt" bindtap="play_handle">
+        <mp-icon icon="play2" wx:if="{{!playStatus}}" color="white" size="{{50}}"></mp-icon>
+        <view class="stop_but_icon" wx:elif="{{playStatus}}">| |</view>
+      </view>
+      <view class="play_buttom_item flexStyle play_Next" data-flag="+" bindtap="next_music" bindtouchend="speed_music_end" bindlongpress="speed_music_start">
+      <mp-icon icon="back2" color="white" size="{{50}}"></mp-icon>
+      </view>
+    </view>
+  </view>
+</view>

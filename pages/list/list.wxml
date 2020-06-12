@@ -8,13 +8,21 @@
 
   <view class="sw_box">
     <swiper current="{{currentTab}}" duration="300" bindchange="swiperTab" style="height:{{heights}}px;">
-      <swiper-item class="g_switme">
+      <swiper-item class="g_switme" >
         <scroll-view scroll-y="true" style="height:{{heights-20}}px;">
           <!-- <button bindtap="handleGotoMap">我的地图选点</button> -->
           <button bindtap="handleGotoMap2">地铁路线</button>
           <button bindtap="handleGotoMap3">路线规划</button>
           <button bindtap="handleGotoMap4">上划列表</button>
           <button bindtap="handleGotoMap5">修改背景</button>
+          <button bindtap="handleGotoMap6">分享</button>
+          <view wx:if="{{ show }}" class="canvas-box" catchtouchmove="forbidMove">
+            <canvas style="width: {{ windowW }}px; height: {{ windowH }}px;" type="2d" id="myCanvas"></canvas>
+            <view class="butBox">
+              <view bindtap="daochu" class="btnSave">点击保存</view>
+              <view bindtap="close" class="btnSave">取消</view>
+            </view>
+          </view>
           <!-- <image src="cloud://dev-xf1of.6465-dev-xf1of-1300924523/images/icon/icon-test_11.png"></image> -->
           <g-popupsList id="popups" status="{{status}}"></g-popupsList>
         </scroll-view>
@@ -32,7 +40,7 @@
       </swiper-item>
       <swiper-item class="g_switme">
         <scroll-view scroll-y="true" style="height:{{heights}}px;">
-          <music datas="{{datas}}"></music>
+          <music datas="{{datas}}"></music> 
         </scroll-view>
       </swiper-item>
       <!-- <swiper-item class="g_switme">

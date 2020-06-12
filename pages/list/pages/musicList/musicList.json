@@ -1,4 +1,5 @@
 {
+  "navigationBarBackgroundColor": "#000",
   "usingComponents": {
       "panel": "/pages/list/component/panel/panel"
   }

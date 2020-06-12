@@ -1,6 +1,5 @@
 // pages/home/home.js
 
-import * as echarts from '../../components/common/ec-canvas/echarts';
 const {comFn} = getApp();
 
 function initChart(canvas, width, height) {
@@ -75,9 +74,10 @@ Page({
     ],
     grids: [
       {
-        title: '地铁',
-        icone: '/imgs/icons/-_1.png',
-        path: 'pages/home/pages/epidemicSituation/epidemicSituation'
+        title: '音乐',
+        icone: '/imgs/icons/icon-test_8.png',
+        path: '/pages/list/pages/musicHome/index'
+        // path: '/pages/list/pages/myMusic/index'
       }, {
         title: '地图',
         pluginId: '',
@@ -92,9 +92,9 @@ Page({
         icone: '/imgs/icons/icon-test_6.png',
         path: ''
       }, {
-        title: '音乐',
-        icone: '/imgs/icons/icon-test_8.png',
-        path: ''
+        title: '地铁',
+        icone: '/imgs/icons/-_1.png',
+        path: 'pages/home/pages/epidemicSituation/epidemicSituation'
       }
     ],
   },
@@ -102,10 +102,15 @@ Page({
 
   handleBntFn: function (e) {
     console.log(e)
-    if (e.detail.id === "地铁") {
+    if (e.detail.title === "地铁") {
       this.handleGotoMap2()
-    } else if (e.detail.id === "地图") {
+    } else if (e.detail.title === "地图") {
       this.handleGotoMap3()
+    }else {
+      console.log(e.detail,'//////////////////////////')
+      wx.navigateTo({
+        url: e.detail.path
+      })
     }
   },
   // 地图线路

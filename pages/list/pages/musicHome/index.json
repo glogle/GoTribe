@@ -1,0 +1,6 @@
+{
+  "navigationBarBackgroundColor": "#000",
+  "usingComponents": {
+    "classlist": "/pages/list/component/funBtn/funBtn"
+  }
+}

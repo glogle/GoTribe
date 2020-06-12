@@ -10,7 +10,7 @@
             <view>
               <view class="g_flex">
                 <view class="flex_box">
-                  <view wx:for="{{item}}" bindtap="bindEpidemicSituation" wx:key="*this" wx:for-item="page" wx:for-index="index" id="{{page.title}}"  style="width:{{100/column}}%">
+                  <view wx:for="{{item}}" bindtap="bindEpidemicSituation" wx:key="*this" wx:for-item="page" wx:for-index="index" data-taget="{{page}}"  style="width:{{100/column}}%">
                     <view class="g_item">
                       <view  class="btn_content">
                         <image src="{{page.icone}}" />

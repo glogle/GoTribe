@@ -15,7 +15,7 @@
   margin-top: 200px;
 }
 .userinfo-nickname {
-  color: #aaa;
+  color: rgb(223, 238, 11);
  
 }
 .bg_img_box{
@@ -46,8 +46,8 @@
   border-radius: 10px;
   padding: 20px 20px 0 20px;
   transform: translateX(-50%);
-  background-color: rgba(57, 139, 247, 0.205);
-  box-shadow: 1rpx 10rpx 10rpx rgba(57, 139, 247, 0.89); 
+  background-color: rgba(20, 21, 22, 0.205);
+  box-shadow: 1rpx 10rpx 10rpx rgba(15, 15, 15, 0.568); 
 
 }
 .tx_img{

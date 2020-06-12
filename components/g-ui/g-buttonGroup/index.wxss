@@ -7,14 +7,12 @@
 
 .g_flex{
   padding: 20rpx 0;
-  background-color: #eee;
 
 }
 .flex_box{
   display: flex;
   align-items: center;
   border-radius: 16rpx;
-  background-color: #fff;
   flex-wrap:wrap ;
   padding: 20rpx 0;
 

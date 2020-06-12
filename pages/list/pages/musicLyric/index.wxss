@@ -1,0 +1,20 @@
+/* pages/list/pages/myMusic/musicLyric/index.wxss */
+.music_lyric_box{
+  height: 100vh;
+  text-align: center;
+ 
+}
+
+.lrclink_style_box{
+  padding: 200rpx 50rpx;
+}
+
+.lrclink_style{
+  color: #fff;
+  font-family: '楷体'
+}
+
+.view_lyric{
+   background-color: rgba(0, 0, 0, 0.774);
+}
+

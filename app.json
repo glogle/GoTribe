@@ -7,15 +7,20 @@
     "pages/logs/logs",
     "pages/home/pages/search/search",
     "pages/list/pages/musicList/musicList",
-    "components/g-ui/g-details/index"
+    "components/g-ui/g-details/index",
+    "pages/list/pages/myMusic/index",
+    "pages/list/pages/musicLyric/index",
+    "pages/list/pages/musicHome/index"
   ],
   "usingComponents": {
     "g-swiper": "/components/g-ui/g-swiper/index",
     "g-panel": "/components/g-ui/g-panel/index",
     "g-grid": "/components/g-ui/g-grid/index",
-    "g-buttonGroup": "/components/g-ui/g-buttonGroup/index",
-    "ec-canvas": "/components/common/ec-canvas/ec-canvas"
+    "g-buttonGroup": "/components/g-ui/g-buttonGroup/index"
   },
+  "requiredBackgroundModes": [
+    "autio"
+  ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#398bf7",

@@ -1,4 +1,5 @@
 // pages/list/pages/musicList/musicList.js
+
 Page({
 
   /**
@@ -12,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getData()
+    this.getData(options)
   },
 
   /**
@@ -65,29 +66,34 @@ Page({
   },
 
   // 自定义函数
-    getData: function () {
+
+    getItmeData(e) {
+      let songid = e.currentTarget.dataset.songid || ''
+      wx.navigateTo({
+        url: '/pages/list/pages/myMusic/index?songid=' + songid,
+      })
+      console.log(e)
+    },
+
+    // 获取数据
+    getData (e) {
+      console.log(e,'/////////////////')
     var that = this
     wx.request({
-      url: "https://api.apiopen.top/musicRankingsDetails",
-      //header:{...}用啥设置啥，我这里什么都不需要修改
+      url: "http://tingapi.ting.baidu.com/v1/restserver/ting",
       method: "GET",
       data:{
-        type:1
+        method:'baidu.ting.billboard.billList',
+        type:e.type || 1,
+        size: 30,
+        offset: 0
       },
-      dataType: "json",//若设置json则直接返回的是对象，若其他返回貌似是String
+      dataType: "json",
       success: function (res) {
-        var obj = res;//我们这里打断点来看数据是否获取到了
-        //这里执行数据操作，
-        console.log(obj)
+        var obj = res.data.song_list;
         that.setData({
-          listdata: res
+          listdata: obj
         });
-      },
-      fail: function (e) {
-
-      },
-      complete: function (obj) {
-
       }
     })
   },
