@@ -15,7 +15,7 @@
                       <view  class="btn_content">
                         <image src="{{page.icone}}" />
                       </view>
-                        <view><text class="item_tile" style="color:{{page.color}}">{{page.title}}</text></view>
+                        <view><text class="item_tile" style="color:{{page.color || ''}}">{{page.title}}</text></view>
                     </view>
                   </view>
                 </view>

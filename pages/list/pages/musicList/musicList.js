@@ -6,63 +6,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    listdata:[]
+    listdata:[],
+    search:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getData(options)
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+    if (options.search) {
+      this.setData({
+        search: options.search
+      })
+      this.searchData()
+    }else{
+      this.getData(options)
+    }
     
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   },
 
   // 自定义函数
@@ -77,7 +37,6 @@ Page({
 
     // 获取数据
     getData (e) {
-      console.log(e,'/////////////////')
     var that = this
     wx.request({
       url: "http://tingapi.ting.baidu.com/v1/restserver/ting",
@@ -89,12 +48,46 @@ Page({
         offset: 0
       },
       dataType: "json",
-      success: function (res) {
-        var obj = res.data.song_list;
-        that.setData({
-          listdata: obj
-        });
+      success:  res=> {
+        if (res.data.error_code === 22000) {
+          var obj = res.data.song_list;
+          that.setData({
+            listdata: obj
+          });
+        }
       }
     })
   },
+
+  // 搜索歌曲
+  searchData() {
+    wx.request({
+      url: "http://tingapi.ting.baidu.com/v1/restserver/ting",
+      method: "GET",
+      data: {
+        method: 'baidu.ting.search.catalogSug',
+        query: this.data.search
+      },
+      dataType: "json",
+      success: res => {
+        if (res.data.error_code === 22000) {
+          let listdata=[], data = res.data.song
+          data.map(item=>{
+            listdata.push({
+              album_title: item.songname,
+              author: item.artistname,
+              song_id: item.songid,
+              pic_radio: item.artistpic
+            })
+          })
+          console.log(listdata)
+
+          this.setData({
+            listdata,
+          });
+        }
+
+      }
+    })
+  }
 })

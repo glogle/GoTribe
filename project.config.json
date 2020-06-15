@@ -19,7 +19,8 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"useCompilerModule": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.0",
@@ -108,6 +109,13 @@
 					"id": -1,
 					"name": "音乐首页",
 					"pathName": "pages/list/pages/musicHome/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/comPage/search/index",
 					"scene": null
 				}
 			]

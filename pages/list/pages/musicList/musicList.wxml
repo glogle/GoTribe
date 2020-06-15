@@ -1,15 +1,25 @@
 <!--pages/list/pages/musicList/musicList.wxml-->
-<view class="musicListbox">
-  <block wx:for="{{listdata}}" wx:key="*this"> 
-    <view class="listItem" bindtap="getItmeData" data-songid="{{item.song_id}}">
-      <view class="list_img">
-        <image src="{{item.pic_radio}}"></image>
+<scroll-view class="music_lyric_box" scroll-y="true">
+  <view class="musicListbox">
+    <block wx:for="{{listdata}}" wx:key="*this"> 
+      <view class="listItem" bindtap="getItmeData" data-songid="{{item.song_id}}">
+        <view class="list_img">
+          <image src="{{item.pic_radio}}"></image>
+        </view>
+        <view class="list_cot">
+          <view class="title norow">{{item.album_title}}</view>
+          <view class="author norow">{{item.author}}</view>
+          <view class="music_content norow">{{item.si_proxycompany}}</view>
+        </view>
+
+        <!-- 小按钮 -->
+        <view class="mini_buttom">
+        
+        </view>
       </view>
-      <view class="list_cot">
-        <view class="title norow">{{item.album_title}}</view>
-        <view class="author norow">{{item.author}}</view>
-        <view class="music_content norow">{{item.si_proxycompany}}</view>
-      </view>
-    </view>
-  </block>
-</view>
+    </block>
+  </view>
+  <view wx:if="{{listdata.length<=0}}" class="msgerr">
+    <text>服务器炸了，请重试！</text>
+  </view>
+</scroll-view>

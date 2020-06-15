@@ -1,14 +1,11 @@
 <view class="music_lyric_box view_lyric">
   <scroll-view class="music_lyric_box" scroll-y="true">
     <view class="g_pd prl20 mt20" >
-      <view class="weui-search-bar__form ">
-        <view class="weui-search-bar__box">
-          <view class="weui-search-bar__input"></view>
+      <view class="search_box ">
+        <view class="search_icon_box" bindtap="bindViewTap">
+          <icon type="search" size="14"></icon>
+          <view class="search_txt">搜索</view>
         </view>
-        <label class="weui-search-bar__label" bindtap="bindViewTap">
-          <icon class="weui-icon-search" type="search" size="14"></icon>
-          <view class="weui-search-bar__text">搜索</view>
-        </label>
       </view>
     </view>
     <view class="mt20" >

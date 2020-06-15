@@ -16,51 +16,61 @@ Page({
       {
         id: 1,
         title: '新歌榜',
+        color: '#fff',
         icone: '/imgs/icons/icon-test_8.png',
       },
       {
         id: 2,
         title: '热歌榜',
+        color: '#fff',
         icone: '/imgs/icons/icon-test_8.png',
       },
       {
         id: 11,
         title: '摇滚榜',
+        color: '#fff',
         icone: '/imgs/icons/icon-test_8.png',
       },
       {
         id: 12,
         title: '爵士',
+        color: '#fff',
         icone: '/imgs/icons/icon-test_8.png',
       },
       {
         id: 16,
         title: '流行',
+        color: '#fff',
         icone: '/imgs/icons/icon-test_8.png',
       },
       {
         id: 21,
         title: '欧美金曲榜',
+        color: '#fff',
         icone: '/imgs/icons/icon-test_8.png',
       },
       {
         id: 22,
         title: '经典老歌榜',
+        color: '#fff',
         icone: '/imgs/icons/icon-test_8.png',
       },
       {
         id: 23,
         title: '情歌对唱榜',
+        color: '#fff',
         icone: '/imgs/icons/icon-test_8.png',
       },
       {
         id: 24,
         title: '影视金曲榜',
+        color: '#fff',
         icone: '/imgs/icons/icon-test_8.png',
       },
       {
         id: 25,
         title: '网络歌曲榜',
+        color: '#fff',
         icone: '/imgs/icons/icon-test_8.png',
       },
     ]
@@ -139,9 +149,18 @@ Page({
       }
     })
   },
+
+  // 跳转到详情页面
   handleBntFn: function (e) {
-      wx.navigateTo({
-        url: '/pages/list/pages/musicList/musicList?type=' + e.detail.id
-      })
+    wx.navigateTo({
+      url: '/pages/list/pages/musicList/musicList?type=' + e.detail.id
+    })
   },
+
+  // 跳转到搜索页面
+  bindViewTap(){
+    wx.navigateTo({
+      url: '/pages/comPage/search/index'
+    })
+  }
 })

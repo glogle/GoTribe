@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/list/pages/musicHome/index",
     "pages/home/home",
     "pages/list/list",
     "pages/collect/collect",
@@ -10,7 +11,7 @@
     "components/g-ui/g-details/index",
     "pages/list/pages/myMusic/index",
     "pages/list/pages/musicLyric/index",
-    "pages/list/pages/musicHome/index"
+    "pages/comPage/search/index"
   ],
   "usingComponents": {
     "g-swiper": "/components/g-ui/g-swiper/index",

@@ -16,7 +16,7 @@ Page({
 
   onReady(e) {
     // this.audioCtx = wx.createAudioContext('myAudio')
-    this.play_handle()
+    
   },
 
   onLoad(e) {
@@ -59,13 +59,16 @@ Page({
         songid: e.songid
       },
       dataType: "json",
-      success: function (res) {
-        let obj = res.data
-        console.log(obj)
-        that.setData({
-          musicInfo: obj.songinfo,
-          musicData: obj.bitrate
-        });
+      success: res=> {
+        if (res.data.error_code === 22000) {
+          let obj = res.data
+          console.log(obj)
+          that.setData({
+            musicInfo: obj.songinfo,
+            musicData: obj.bitrate
+          });
+          that.play_handle()
+        }
       }
     })
   },
@@ -82,6 +85,11 @@ Page({
         dataUrl: this.data.musicData.file_link,
         title: this.data.musicInfo.album_title,
         coverImgUrl: this.data.musicInfo.album_title
+      })
+      wx.getBackgroundAudioPlayerState({
+        success:res=>{
+          console.log(res,'res///////////////////////')
+        }
       })
     }else {
       wx.stopBackgroundAudio()

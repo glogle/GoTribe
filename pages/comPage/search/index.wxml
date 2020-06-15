@@ -1,0 +1,25 @@
+    <view class="g_pd prl20 mt20" >
+      <view class="search_box ">
+        <view class="search_icon_box">
+          <input class="search_input_box" bindinput ="searchInput" value="{{inputValue}}"></input>
+          <view class="search_txt_but"  bindtap="search">搜索</view>
+          <!-- <icon type="search" size="14"></icon>
+          <text class="search_txt">搜索</text> -->
+        </view>
+      </view>
+
+      <!-- 搜索记录 -->
+
+      <view class="search_record_box">
+        <view class="search_record_text">搜索记录：</view>
+        <view class="search_record_list">
+          <view bindtap="searchRcord" wx:for="{{recordData}}" wx:key="*this" data-item="{{item}}" class="search_record_item">{{item}}</view>
+        </view>
+        <view class="clear_record" bindtap="clearRecord">
+         <block wx:if="{{recordData.length>0}}">
+          <mp-icon icon="delete" color="white" size="14"></mp-icon><text>清除历史记录</text>
+         </block>
+         <text wx:else="{{recordData.length<=0}}">暂无搜索记录</text>
+        </view>
+      </view>
+    </view>

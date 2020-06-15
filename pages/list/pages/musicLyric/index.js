@@ -71,11 +71,13 @@ Page({
       url: e.lrclink,
       method: "GET",
       dataType: "json",
-      success: function (res) {
-        let lrclink = res.data
-        that.setData({
-          lrclink
-        });
+      success: res=> {
+        if (res.data.error_code === 22000) {
+          let lrclink = res.data
+          that.setData({
+            lrclink
+          });
+        }
       }
     })
   }
