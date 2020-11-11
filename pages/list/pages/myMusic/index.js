@@ -3,6 +3,7 @@ let back = wx.playBackgroundAudio
 let interval
 Page({
   data: {
+    songid:'',
     playTime:0,
     percent: 0, // 进度条
     speedStatus: false, // 快进状态
@@ -20,7 +21,10 @@ Page({
   },
 
   onLoad(e) {
-    this.getData(e)
+    this.setData({
+      songid: e.songid
+    })
+    this.getData()
   },
 
   onShow () {
@@ -41,7 +45,6 @@ Page({
       animation: this.animation.export()
     })
   },
-  
 
   // 返回上一级
   goback() {
@@ -56,7 +59,7 @@ Page({
       method: "GET",
       data: {
         method: 'baidu.ting.song.play',
-        songid: e.songid
+        songid: that.data.songid
       },
       dataType: "json",
       success: res=> {
@@ -73,14 +76,13 @@ Page({
     })
   },
 
-
   // 播放/暂停
   play_handle() {
     let back = wx.playBackgroundAudio 
     this.setData({
       playStatus: !this.data.playStatus,
     })
-    if (this.data.playStatus) {
+    // if (this.data.playStatus) {
       back({
         dataUrl: this.data.musicData.file_link,
         title: this.data.musicInfo.album_title,
@@ -91,10 +93,10 @@ Page({
           console.log(res,'res///////////////////////')
         }
       })
-    }else {
-      wx.stopBackgroundAudio()
-    }
-    // this.rotateAni()
+    // }else {
+    //   wx.stopBackgroundAudio()
+    // }
+    // // this.rotateAni()
   },
 
   // 快进开始
@@ -107,10 +109,10 @@ Page({
     console.log('开始')
      interval = setInterval(() => {
       this.setData({
-        percent: flag === '+' ? this.data.percent + 1 : this.data.percent - 1
+        percent: flag === '+' ? this.data.percent + 0.5 : this.data.percent - 0.5
       })
        if ((this.data.percent >= 100 && flag === '+') || (this.data.percent <= 0 && flag === '-')) clearInterval(interval)
-    }, 50)
+    }, 30)
     wx.seekBackgroundAudio({
       position: this.data.percent
     })
@@ -129,10 +131,13 @@ Page({
   // 上一曲
   previous_music(){
     console.log('上一曲')
+    this.getSongId()
   },
   // 下一曲
   next_music(){
     console.log('下一曲')
+    this.getSongId('u')
+    
   },
 
   // 播放音乐
@@ -144,6 +149,23 @@ Page({
     })
   },
 
+  // 遍历songId
+  getSongId(n='d'){
+    // wx.stopBackgroundAudio()
+    let res = n!== 'd'? 1:-1
+    let data = wx.getStorageSync('musicList')
+    if(data) {
+      let songid = this.data.songid
+      data.map((item,index)=>{
+        if(songid === item.song_id) {
+          this.setData({
+            songid: data[index+res].song_id
+          })
+        }
+      })
+      this.getData()
+    }
+  },
   // 暂替音乐
   pause_muisc () {
 

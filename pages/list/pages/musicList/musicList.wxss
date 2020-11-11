@@ -31,7 +31,7 @@
   background-color: #fff;
 }
 
-.list_img image{
+.list_img .image_view{
   width: 140rpx;
   height: 140rpx;
   margin-right: 20rpx;
@@ -60,4 +60,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.endList {
+  text-align: center;
+  padding-bottom: 40rpx;
+}
+
+.weui-loadmore__tips{
+  color: #fff;
 }

@@ -69,5 +69,8 @@ height:
 }
 .g_spd{
   padding: 0 10px;
-}
 
+}
+.g_spd image {
+  background-color: #f7f7f7;
+}

@@ -15,5 +15,9 @@
       <!-- <btn></btn>
       <btn></btn> -->
       <button bindtap="toLogin">登录</button>
+      <button bindtap="getLocationData">定位</button>
+      <view> 经度：{{latitude}}</view>
+      <view> 维度：{{latitude}}</view>
+      
   </view>
 </view>

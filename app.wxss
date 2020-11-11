@@ -71,3 +71,10 @@ page{
   padding-left: 20rpx;
   padding-right: 20rpx;
 }
+
+
+.gflex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

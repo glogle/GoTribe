@@ -7,7 +7,14 @@ Page({
    */
   data: {
     listdata:[],
-    search:''
+    search:'',
+    type:'',
+    offset: 0,
+    size: 30,
+    endData:'',
+    tips: '请稍后',
+    show: false,
+    animated: true
   },
 
   /**
@@ -20,10 +27,22 @@ Page({
       })
       this.searchData()
     }else{
-      this.getData(options)
+      this.setData({
+        type: options.type
+      })
+      this.getData()
     }
     
   },
+
+    // 刷新
+    upData(){
+      if (this.data.search) {
+        this.searchData()
+      }else{
+        this.getData()
+      }
+    },
 
   // 自定义函数
 
@@ -36,23 +55,34 @@ Page({
     },
 
     // 获取数据
-    getData (e) {
+    getData () {
     var that = this
     wx.request({
       url: "http://tingapi.ting.baidu.com/v1/restserver/ting",
       method: "GET",
       data:{
         method:'baidu.ting.billboard.billList',
-        type:e.type || 1,
-        size: 30,
-        offset: 0
+        type:that.data.type || 1,
+        size: this.data.size,
+        offset: that.data.offset
       },
       dataType: "json",
       success:  res=> {
+        this.setData({
+          show:false
+        })
         if (res.data.error_code === 22000) {
           var obj = res.data.song_list;
+          if(obj ===null) {
+            this.setData({
+              endData: '我是有底线的！'
+            })
+            return
+          }
+          let setArr = [...this.data.listdata,...obj]
+          wx.setStorageSync('musicList', setArr)
           that.setData({
-            listdata: obj
+            listdata: setArr
           });
         }
       }
@@ -80,8 +110,6 @@ Page({
               pic_radio: item.artistpic
             })
           })
-          console.log(listdata)
-
           this.setData({
             listdata,
           });
@@ -89,5 +117,34 @@ Page({
 
       }
     })
-  }
+  },
+  list_down(){
+    console.log('到底了')
+    if(this.data.endData||this.data.listdata.length<=0) return
+    this.setData({
+      show:true
+    })
+    if(!this.data.search) {
+      let size = this.data.size, offset = this.data.offset
+      this.setData({
+        offset: offset+size
+      })
+      this.getData()
+    }
+  },
+
+  // 缓存音乐id
+  
+
+  // // 加载数据
+  // onShow() {
+  //   this.timer = setInterval(() => {
+  //     this.setData({
+  //       show: !this.data.show
+  //     })
+  //   }, 2000)
+  // },
+  // onUnload() {
+  //   clearInterval(this.timer)
+  // }
 })

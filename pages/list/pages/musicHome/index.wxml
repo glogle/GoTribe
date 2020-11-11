@@ -13,8 +13,7 @@
     </view>
     <g-buttonGroup bind:handleBntFn="handleBntFn" data="{{musicType}}"></g-buttonGroup>
     <g-panel>
-      <view class="container" solt="g-panel-content-slot">
-      </view>
+      <view class="container" solt="g-panel-content-slot"></view>
     </g-panel>
   </scroll-view>
 </view>

@@ -1,25 +1,31 @@
 <!--pages/list/pages/musicList/musicList.wxml-->
-<scroll-view class="music_lyric_box" scroll-y="true">
+<scroll-view class="music_lyric_box" scroll-y="true" bindscrolltolower="list_down">
   <view class="musicListbox">
-    <block wx:for="{{listdata}}" wx:key="*this"> 
-      <view class="listItem" bindtap="getItmeData" data-songid="{{item.song_id}}">
-        <view class="list_img">
-          <image src="{{item.pic_radio}}"></image>
-        </view>
-        <view class="list_cot">
-          <view class="title norow">{{item.album_title}}</view>
-          <view class="author norow">{{item.author}}</view>
-          <view class="music_content norow">{{item.si_proxycompany}}</view>
-        </view>
-
-        <!-- 小按钮 -->
-        <view class="mini_buttom">
-        
+    <view wx:for="{{listdata}}" class="listItem" bindtap="getItmeData" data-songid="{{item.song_id}}" wx:key="*this">
+      <view class="list_img">
+        <image class="image_view" wx:if="{{item.pic_radio}}"  src="{{item.pic_radio}}"></image>
+        <view class="image_view gflex" wx:else>
+         <mp-icon icon="album" color="white" size="{{50}}"></mp-icon>
         </view>
       </view>
-    </block>
+      <view class="list_cot">
+        <view class="title norow">{{item.album_title}}</view>
+        <view class="author norow">{{item.author}}</view>
+        <view class="music_content norow">{{item.si_proxycompany}}</view>
+      </view>
+
+      <!-- 小按钮 -->
+      <view class="mini_buttom">
+      
+      </view>
+    </view>
   </view>
-  <view wx:if="{{listdata.length<=0}}" class="msgerr">
+  <view wx:if="{{listdata.length<=0}}" class="msgerr" bindtap="upData">
+    <mp-icon icon="refresh" color="white" size="{{25}}"></mp-icon>
     <text>服务器炸了，请重试！</text>
   </view>
+  <view class="endList" wx:if="{{show}}">
+     <mp-loading class="isLoading" type="circle"></mp-loading>
+  </view>
+  <view class="endList" wx:if="{{endData&&!listdata.length<=0}}">{{endData}}</view>
 </scroll-view>

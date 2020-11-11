@@ -1,124 +1,134 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"nodeModules": true,
-		"autoAudits": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useCompilerModule": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.11.0",
-	"appid": "wx4713285d56af760e",
-	"projectname": "Go%E9%83%A8%E8%90%BD",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "首页",
-					"pathName": "pages/home/home",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "列表页",
-					"pathName": "pages/list/list",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "收藏",
-					"pathName": "pages/collect/collect",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "我的",
-					"pathName": "pages/user/user",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "收藏2",
-					"pathName": "components/g-ui/g-details/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "mymusic",
-					"pathName": "pages/list/pages/myMusic/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "音乐列表",
-					"pathName": "pages/list/pages/musicList/musicList",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "音乐首页",
-					"pathName": "pages/list/pages/musicHome/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "search",
-					"pathName": "pages/comPage/search/index",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.11.0",
+  "appid": "wx4713285d56af760e",
+  "projectname": "Go%E9%83%A8%E8%90%BD",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "首页",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "列表页",
+          "pathName": "pages/list/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "收藏",
+          "pathName": "pages/collect/collect",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "收藏2",
+          "pathName": "components/g-ui/g-details/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "mymusic",
+          "pathName": "pages/list/pages/myMusic/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "音乐列表",
+          "pathName": "pages/list/pages/musicList/musicList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "音乐首页",
+          "pathName": "pages/list/pages/musicHome/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "search",
+          "pathName": "pages/comPage/search/index",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

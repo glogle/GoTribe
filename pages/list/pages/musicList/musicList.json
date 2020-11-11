@@ -1,6 +1,8 @@
 {
   "navigationBarBackgroundColor": "#000",
   "usingComponents": {
-      "panel": "/pages/list/component/panel/panel"
+      "panel": "/pages/list/component/panel/panel",
+      "mp-icon": "/miniprogram_npm/weui-miniprogram/icon/icon",
+      "mp-loading": "/miniprogram_npm/weui-miniprogram/loading/loading"
   }
 }
