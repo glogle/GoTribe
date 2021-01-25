@@ -16,6 +16,9 @@
           <button bindtap="handleGotoMap4">上划列表</button>
           <button bindtap="handleGotoMap5">修改背景</button>
           <button bindtap="handleGotoMap6">分享</button>
+          <button bindtap="handleGotoMap7">文件预览</button>
+          <button bindgetuserinfo="getUserInfo" open-type="getUserInfo">授权获取用户信息</button>
+          <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">手机号码授权</button>
           <view wx:if="{{ show }}" class="canvas-box" catchtouchmove="forbidMove">
             <canvas style="width: {{ windowW }}px; height: {{ windowH }}px;" type="2d" id="myCanvas"></canvas>
             <view class="butBox">

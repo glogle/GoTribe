@@ -1,39 +1,37 @@
 // pages/detail/detail.js
 var app = getApp()
 Page({
-  data: { 
+  data: {
     status: false,
-    currentTab: 3, // 当前tab位置
-    show: false, 
-    windowW:'',
-    windowH:'',
+    currentTab: 0, // 当前tab位置
+    show: false,
+    windowW: '',
+    windowH: '',
     bgpic: 'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
     propic: 'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
-    list:[
-      {
-        id:0,
-        title:'组件1',
-        data:'小说',
-        bgColor: '#ff0000'
-      }, {
-        id:1,
-        title: '组件2',
-        data: '漫画',
-        bgColor: '#00ff00'
-      }, {
-        id:2,
-        title: '组件3',
-        data: '视频',
-        bgColor: '#0000ff'
-      }, {
-        id:3,
-        title: '组件4',
-        data: '音乐',
-        bgColor: '#f0000f'
-      }
-    ],
-    datas:'',
-    heights:0,
+    list: [{
+      id: 0,
+      title: '组件1',
+      data: '小说',
+      bgColor: '#ff0000'
+    }, {
+      id: 1,
+      title: '组件2',
+      data: '漫画',
+      bgColor: '#00ff00'
+    }, {
+      id: 2,
+      title: '组件3',
+      data: '视频',
+      bgColor: '#0000ff'
+    }, {
+      id: 3,
+      title: '组件4',
+      data: '音乐',
+      bgColor: '#f0000f'
+    }],
+    datas: '',
+    heights: 0,
   },
   onLoad: function () {
     var _ = this
@@ -43,13 +41,13 @@ Page({
           _.setData({
             heights: res.windowHeight - rect[0].height
           });
-    _.canvasImage()
+          _.canvasImage()
         },
       })
-　　}).exec()
+    }).exec()
     this.getData()
   },
-  gotopage:function(){
+  gotopage: function () {
     console.log('qwww')
   },
   getData: function () {
@@ -58,9 +56,9 @@ Page({
       url: "https://api.apiopen.top/musicRankings",
       //header:{...}用啥设置啥，我这里什么都不需要修改
       method: "GET",
-      dataType: "json",//若设置json则直接返回的是对象，若其他返回貌似是String
+      dataType: "json", //若设置json则直接返回的是对象，若其他返回貌似是String
       success: function (res) {
-        var obj = res;//我们这里打断点来看数据是否获取到了
+        var obj = res; //我们这里打断点来看数据是否获取到了
         //这里执行数据操作，
         console.log(obj)
         that.setData({
@@ -108,7 +106,7 @@ Page({
   //     url: 'plugin://chooseLocation/index?key=' + key + '&referer=' + referer + '&location=' + location + '&category=' + category
   //   });
   // },
-  handleGotoMap2: function(){
+  handleGotoMap2: function () {
     let plugin = requirePlugin("subway");
     const key = 'BH5BZ-WE7L5-N7LIL-QA5I7-7S5SS-QDBZ5'; //使用在腾讯位置服务申请的key
     const referer = 'Go部落'; //调用插件的app的名称
@@ -116,11 +114,11 @@ Page({
       url: 'plugin://subway/index?key=' + key + '&referer=' + referer
     });
   },
-  handleGotoMap3: function(){
+  handleGotoMap3: function () {
     let plugin = requirePlugin('routePlan');
     const key = 'BH5BZ-WE7L5-N7LIL-QA5I7-7S5SS-QDBZ5'; //使用在腾讯位置服务申请的key
     const referer = 'Go部落'; //调用插件的app的名称
-    let endPoint = JSON.stringify({  //终点
+    let endPoint = JSON.stringify({ //终点
       'name': '',
       'latitude': null,
       'longitude': null
@@ -130,7 +128,7 @@ Page({
     });
   },
   handleGotoMap4: function (e) {
-    if(e){
+    if (e) {
       this.selectComponent("#popups").showBox()
     }
     // this.setData({
@@ -162,23 +160,23 @@ Page({
       .exec(this.drawCanvas.bind(this))
     // that.drawCanvas()
   },
-  forbidMove(e) { 
+  forbidMove(e) {
     return
   },
-  canvasImage () {
+  canvasImage() {
     var that = this
 
     // 获取设备宽高，以备海报全屏显示
 
     wx.getSystemInfo({
- 
-      success: (res)=> {
+
+      success: (res) => {
 
         that.setData({
 
-          windowW: res.windowWidth-20,
+          windowW: res.windowWidth - 20,
           // windowH: res.windowHeight
-          windowH: this.data.heights-20
+          windowH: this.data.heights - 20
 
         })
 
@@ -229,7 +227,7 @@ Page({
     })
   },
   // 绘制canvas
-  
+
   drawCanvas(res) {
     var that = this
 
@@ -242,7 +240,10 @@ Page({
 
     const query = wx.createSelectorQuery()
     query.select('#myCanvas')
-      .fields({ node: true, size: true })
+      .fields({
+        node: true,
+        size: true
+      })
       .exec((res) => {
         const canvas = res[0].node
         const ctx = canvas.getContext('2d')
@@ -252,14 +253,14 @@ Page({
         // canvas.height = res[0].height * dpr
         canvas.width = windowW
         canvas.height = windowH
-         wx.getImageInfo({
-           src: that.data.bgpic,
-          success(res){
-        // ctx.drawImage(res.path,0,0,100,100)
-        // ctx.draw()
-        console.log(res)
-      }
-    })
+        wx.getImageInfo({
+          src: that.data.bgpic,
+          success(res) {
+            // ctx.drawImage(res.path,0,0,100,100)
+            // ctx.draw()
+            console.log(res)
+          }
+        })
         ctx.scale(dpr, dpr)
         ctx.fillRect(0, 0, 100, 100)
       })
@@ -271,8 +272,8 @@ Page({
     // console.log(canvas,'.........')
     // const context = canvas.getContext('2d')
     // console.log(canvas,context,'context//////////////////////////////')
-    
- 
+
+
 
 
     // // 海报背景图
@@ -339,9 +340,9 @@ Page({
 
     // context.draw()
 
-  },// 点击保存按钮，同时将画布转化为图片
+  }, // 点击保存按钮，同时将画布转化为图片
 
-  daochu () {
+  daochu() {
 
     var that = this;
 
@@ -396,7 +397,7 @@ Page({
     })
 
   },
-  close () {
+  close() {
     this.setData({
       show: false
     })
@@ -522,5 +523,41 @@ Page({
 
     return row
 
+  },
+  handleGotoMap7(){
+    wx.downloadFile({
+      // 示例 url，并非真实存在
+      // url: 'https://wyj-1301188774.cos.ap-guangzhou.myqcloud.com/czzy/rename.docx',
+      url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607087634603&di=243abb935725d45ebdcbb16caa3e9535&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F05%2F00%2F01300000194285122188000535877.jpg',
+      success: function (res) {
+        const filePath = res.tempFilePath
+        wx.openDocument({
+          filePath: filePath,
+          success: function (res) {
+            console.log('打开文档成功')
+          }
+        })
+      }
+    })
+  },
+
+  // 获取用户信息
+  getUserInfo() {
+    wx.getUserInfo({
+      success: function(res) {
+        var userInfo = res.userInfo
+      //  console.log('授权获取用户信息：',res)
+       console.log('encryptedData',res.encryptedData)
+       console.log('iv',res.iv)
+      },
+      fail: err =>{
+        console.log('授权获取用户信息失败：',err)
+      }
+    })
+  },
+  getPhoneNumber (e) {
+    console.log(e.detail.errMsg)
+    console.log(e.detail.iv)
+    console.log(e.detail.encryptedData)
   }
 })
