@@ -1,0 +1,8 @@
+<!-- 组件模板 -->
+<view class="wrapper">
+  <slot name="before"></slot>
+  <slot>
+    <view>这里是组件的内部细节</view>
+  </slot>
+  <slot name="after"></slot>
+</view>

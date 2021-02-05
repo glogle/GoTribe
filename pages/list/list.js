@@ -33,13 +33,13 @@ Page({
     datas: '',
     heights: 0,
   },
-  onLoad: function () {
+  onReady: function () {
     var _ = this
     wx.createSelectorQuery().selectAll('.swiper-tab').boundingClientRect(function (rect) {
       wx.getSystemInfo({
         success: function (res) {
           _.setData({
-            heights: res.windowHeight - rect[0].height
+            heights: res.windowHeight - rect[0].height 
           });
           _.canvasImage()
         },
@@ -252,7 +252,7 @@ Page({
         // canvas.width = res[0].width * dpr
         // canvas.height = res[0].height * dpr
         canvas.width = windowW
-        canvas.height = windowH
+        canvas.height = windowH 
         wx.getImageInfo({
           src: that.data.bgpic,
           success(res) {

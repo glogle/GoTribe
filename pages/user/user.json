@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "我的",
   "usingComponents": {
-    "btn":"/pages/user/component/funBtn/funBtn"
+    "btn":"/pages/user/component/funBtn/funBtn",
+    "slotContent":"/pages/user/component/slotContent"
   }
 }
