@@ -15,17 +15,19 @@
           <button bindtap="handleGotoMap3">路线规划</button>
           <button bindtap="handleGotoMap4">上划列表</button>
           <button bindtap="handleGotoMap5">修改背景</button>
-          <button bindtap="handleGotoMap6">分享</button>
+          <!-- <button bindtap="handleGotoMap6">分享</button> -->
+          <g-canvas title="标题" content="内容" price="1232" detailImg="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fd58b0ecfde7121920625fff16b7946ae707b3683cb97-fc3l3X_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1618564072&t=d8bacce838ef12e1a61c99adaa7d56ae" codeImg="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fd58b0ecfde7121920625fff16b7946ae707b3683cb97-fc3l3X_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1618564072&t=d8bacce838ef12e1a61c99adaa7d56ae">
+          </g-canvas>
           <button bindtap="handleGotoMap7">文件预览</button>
           <button bindgetuserinfo="getUserInfo" open-type="getUserInfo">授权获取用户信息</button>
           <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">手机号码授权</button>
-          <view wx:if="{{ show }}" class="canvas-box" catchtouchmove="forbidMove">
+          <!-- <view wx:if="{{ show }}" class="canvas-box" catchtouchmove="forbidMove">
             <canvas style="width: {{ windowW }}px; height: {{ windowH }}px;" type="2d" id="myCanvas"></canvas>
             <view class="butBox">
               <view bindtap="daochu" class="btnSave">点击保存</view>
               <view bindtap="close" class="btnSave">取消</view>
             </view>
-          </view>
+          </view> -->
           <!-- <image src="cloud://dev-xf1of.6465-dev-xf1of-1300924523/images/icon/icon-test_11.png"></image> -->
           <g-popupsList id="popups" status="{{status}}"></g-popupsList>
         </scroll-view>

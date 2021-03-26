@@ -1,0 +1,5 @@
+/* components/g-ui/g-footer/index.wxss */
+.g-footer {
+  margin-top: 100vh;
+  text-align: center;
+}

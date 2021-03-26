@@ -1,0 +1,8 @@
+<!--packages/hardware/pages/bluetooth/index.wxml-->
+<view class="bluetooth">
+  <view class="openBluetoothBox">
+    <button bindtap="openBluetooth">开启蓝牙</button>
+    {{add}}
+  </view>
+  <g-footer>引导标语</g-footer>
+</view>

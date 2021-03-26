@@ -1,0 +1,51 @@
+<button bindtap="showWeb">分享</button>
+<view class="shareImage">
+<view class="web" catchtouchmove='stopMove' wx:if="{{isShow}}">
+    <view class="foot" animation="{{animation}}">
+        <view class="foot-list">
+            <button class="" hover-class="none" open-type="share">
+                <view class="iconfont icon-weixin wx" ></view>
+                <view class="title">分享给朋友</view>
+            </button>
+            <view class="" bindtap='creatPosters'>
+                <view class="iconfont icon-ico goods-icon"></view>
+                <view class="title">生成商品海报</view>
+            </view>
+            
+        </view>
+        <view class="cancel" bindtap='cancel'>关闭</view>
+    </view>
+</view>
+<canvas  
+    canvas-id="myCanvas"
+    style="width:{{screen_width*375+'px'}}; height:{{screen_height-100+'px'}}"
+ ></canvas>
+ <!-- 海报展示 -->
+ <view class="posters-content"  catchtouchmove='stopMove' wx:if="{{posters}}">
+     <view class="poster-warpp">
+        <view class="posters-img">
+            <image class="posters"
+             style="width:{{screen_width*375+180+'rpx !important'}};height:{{screen_height+150+'rpx'}}"  
+             src="{{posters}}" 
+             mode='aspectFill'
+             bindtap='preview'
+            />
+        </view>
+        <view class="bottonBox">
+  
+        <view class="call-off" catchtap="callOff">取消保存</view>
+        <button
+            class="save" 
+            open-type="openSetting" 
+            wx:if="{{isShare}}"
+            bindopensetting='openSetting'
+        >
+        	保存图片
+        </button>
+        <view class="save" wx:else catchtap="save">保存图片</view>
+        </view>
+     </view>
+</view>
+
+
+</view>

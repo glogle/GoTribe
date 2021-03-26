@@ -30,7 +30,7 @@ swiper{
   border-bottom: 4rpx solid #398bf7;
 }
 .sw_box{
-  /* height: 100px; */
+  height: calc(100vh - 88rpx);
   overflow-y:scroll;
 }
 

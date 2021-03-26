@@ -1,0 +1,93 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "首页",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "列表页",
+          "pathName": "pages/list/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "收藏",
+          "pathName": "pages/collect/collect",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "收藏2",
+          "pathName": "components/g-ui/g-details/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "mymusic",
+          "pathName": "pages/list/pages/myMusic/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "音乐列表",
+          "pathName": "pages/list/pages/musicList/musicList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "音乐首页",
+          "pathName": "pages/list/pages/musicHome/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "search",
+          "pathName": "pages/comPage/search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "蓝牙模块",
+          "pathName": "packages/hardware/pages/bluetooth/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "canvas",
+          "pathName": "packages/hardware/pages/canvas/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

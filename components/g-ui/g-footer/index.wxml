@@ -1,0 +1,4 @@
+<!--components/g-ui/g-footer/index.wxml-->
+<view class="g-footer">
+  <slot></slot>
+</view>

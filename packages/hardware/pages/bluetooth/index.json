@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"蓝牙模块",
+  "usingComponents": {
+    "g-footer":"/components/g-ui/g-footer/index"
+  }
+}

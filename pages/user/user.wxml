@@ -14,9 +14,7 @@
       </view>
       <!-- <btn></btn>
       <btn></btn> -->
-      <slotContent>
-        dkjfdsfklds
-      </slotContent>
+      <slotContent></slotContent>
       <button bindtap="toLogin">登录</button>
       <button bindtap="getLocationData">定位</button>
       <view> 经度：{{latitude}}</view>

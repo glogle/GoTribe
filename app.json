@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/user/user",
     "pages/home/home",
+    "pages/user/user",
     "pages/list/pages/musicHome/index",
     "pages/list/list",
     "pages/collect/collect",
@@ -12,6 +12,15 @@
     "pages/list/pages/myMusic/index",
     "pages/list/pages/musicLyric/index",
     "pages/comPage/search/index"
+  ],
+  "subpackages": [
+    {
+      "root": "packages/hardware",
+      "name": "packages/hardware",
+      "pages": [
+        "pages/bluetooth/index"
+      ]
+    }
   ],
   "usingComponents": {
     "g-swiper": "/components/g-ui/g-swiper/index",
@@ -66,11 +75,11 @@
   "sitemapLocation": "sitemap.json",
   "plugins": {
     "subway": {
-      "version": "1.0.4",
+      "version": "1.0.10",
       "provider": "wx6aaf93c4435fa1c1"
     },
     "routePlan": {
-      "version": "1.0.3",
+      "version": "1.0.12",
       "provider": "wx50b5593e81dd937a"
     }
   }

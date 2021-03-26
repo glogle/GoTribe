@@ -7,7 +7,8 @@
         "g-viewBox": "/components/g-ui/g-viewBox/index",
         "g-calendar": "/components/g-ui/g-calendar/index",
         "g-popupsList": "/components/g-ui/g-popupsList/index",
-        "g-details": "/components/g-ui/g-details/index"
+        "g-details": "/components/g-ui/g-details/index",
+        "g-canvas": "/components/g-ui/g-canvas/index"
   }
   
 }

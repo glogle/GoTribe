@@ -1,0 +1,11 @@
+/* packages/hardware/pages/bluetooth/index.wxss */
+.openBluetoothBox {
+  padding: 20rpx;
+}
+.bluetoothTitle {
+  margin: 0 auto;
+  padding: 40rpx 0 ;
+  font-size: 30px;
+  text-align: center;
+  font-family: '楷体';
+}

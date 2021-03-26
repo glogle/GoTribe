@@ -92,6 +92,10 @@ Page({
         icone: '/imgs/icons/icon-test_6.png',
         path: ''
       }, {
+        title: '蓝牙模块',
+        icone: '/imgs/icons/icon-test_6.png',
+        path: '/packages/hardware/pages/bluetooth/index'
+      }, {
         title: '地铁',
         icone: '/imgs/icons/-_1.png',
         path: 'pages/home/pages/epidemicSituation/epidemicSituation'

@@ -31,6 +31,11 @@ Component({
     imgData: {
       type: Array,
       value: [],
+    },
+    // 组件背景色
+    bgColor: {
+      type: String,
+      value: ''
     }
   },
 

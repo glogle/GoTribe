@@ -1,0 +1,126 @@
+/* components/g-ui/g-canvas/index.wxss */
+.web{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+}
+.foot{
+  width: 100%;
+  height: 300rpx;
+  background: #f3f1f2;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+}
+.foot-list{
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.wx{
+  color: #50b674;
+  font-size: 60rpx;
+  text-align: center;
+  
+}
+.shareImage button{
+  line-height: unset;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+.shareImage .button-hover{
+  color: transparent !important;
+  background: transparent !important;
+}
+.shareImage button::after{
+  display: none;
+}
+.title{
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 20rpx;
+}
+.goods-icon{
+  color: #3c7cfc;
+  font-size: 60rpx;
+  text-align: center;
+}
+.bottonBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cancel{
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  color: #333;
+  background: #fff;
+}
+canvas{
+  position: fixed;
+  bottom: -100%;
+}
+.posters-content{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.poster-warpp{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 20rpx;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  -moz-transform:translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%);
+  -o-transform:translate(-50%,-50%);
+  padding: 24rpx;
+  background: #fff;
+}
+
+.posters-img{
+  display: block;
+  width: 550rpx;
+  margin: auto;
+  background: #fff;
+  height:740rpx;
+  overflow: hidden;
+  opacity: 1;
+  text-align: center;
+}
+.call-off, .save{
+  font-size: 28rpx;
+  color: #fff;
+  background: #3c7cfc;
+  text-align: center;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  -webkit-border-radius: 10rpx;
+  -moz-border-radius: 10rpx;
+  -ms-border-radius: 10rpx;
+  -o-border-radius: 10rpx;
+}
+.call-off{
+  font-size: 28rpx;
+  background-color: #e8e8e8;
+  margin-top: 20rpx;
+  text-align: center;
+}

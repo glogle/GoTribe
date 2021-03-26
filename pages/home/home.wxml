@@ -11,7 +11,7 @@
     </view>
 </view> 
   <g-swiper imgData="{{imgUrls}}"></g-swiper>
-  <g-buttonGroup bind:handleBntFn="handleBntFn" data="{{grids}}"></g-buttonGroup>
+  <g-buttonGroup bind:handleBntFn="handleBntFn" bgColor="#fff" data="{{grids}}"></g-buttonGroup>
   <!-- <grids></grids> -->
   <g-panel>
     <view class="container" solt="g-panel-content-slot">

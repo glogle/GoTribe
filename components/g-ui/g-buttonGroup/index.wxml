@@ -7,9 +7,9 @@
       <swiper-item>
         <view class="g_spd">
           <view class="buttonGroupComtainer" bindload="getElementHeight">
-            <view>
+            <view >
               <view class="g_flex">
-                <view class="flex_box">
+                <view class="flex_box" style="background-color:{{bgColor}};">
                   <view wx:for="{{item}}" bindtap="bindEpidemicSituation" wx:key="*this" wx:for-item="page" wx:for-index="index" data-taget="{{page}}"  style="width:{{100/column}}%">
                     <view class="g_item">
                       <view  class="btn_content">

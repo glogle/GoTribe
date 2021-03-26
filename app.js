@@ -3,9 +3,15 @@
 const config = require('./config/index.js')
 const comFn = require('./utils/common.js')
 const musicApi = require('./api/musicApi.js')
+const tools = require('./utils/tools')
+const Anim = require("./components/gsd-lib/anim/anim.min");
 App({
   //应用程序启动
   onLaunch: function () {
+    this.tools = tools
+    // Anim 挂载
+    this.Anim = Anim;
+    
     // this.config = config
     this.comFn = comFn
     this.musicApi = musicApi
